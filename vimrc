@@ -25,3 +25,5 @@ set relativenumber
 set timeoutlen=300
 set showcmd
 "Comment to test rcm, the dotfile manager
+
+:map <F5> :setlocal spell! spelllang=en_us<CR>
