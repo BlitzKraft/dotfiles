@@ -17,6 +17,10 @@
 	#git commit -m
 	cm = !git add -A && git commit -m
 	undo-commit = reset --soft HEAD^
+	#checkout
+	co = checkout
+	#create branch and checkout
+	cob = checkout -b
 
 	#git undo 
 	#git config --global alias.undo-commit 'reset --soft HEAD^'	

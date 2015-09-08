@@ -55,6 +55,9 @@ alias taskwork="clear; task list proj:Work"
 alias bb2internet="~/.scripts/connect-bb-internet"
 alias repower="powerline-daemon -k;sleep 2; powerline-daemon -q"
 
+#lsrc is from rcm, a dotfile managing utility
+alias lsrc="lsrc | sed 's/:/ -> /g'"
+
 
 #Endal
 
