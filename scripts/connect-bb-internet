@@ -1,0 +1,10 @@
+#!/bin/bash
+
+echo "Checking connection to beagle bone..."
+ifconfig eth1 192.168.7.1
+echo "Routing beagle bone to interface wlan0"
+iptables --table nat --append POSTROUTING --out-interface wlan0 -j MASQUERADE
+echo "Accept connections from beaglebone at eth1"
+iptables --append FORWARD --in-interface eth1 -j ACCEPT
+echo 1 > /proc/sys/net/ipv4/ip_forward
+echo "If this fails, run with sudo."
