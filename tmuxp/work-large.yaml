@@ -1,0 +1,17 @@
+session_name: work
+windows:
+- focus: 'true'
+  layout: 1308,117x60,0,0[117x21,0,0,1,117x20,0,22,2,117x17,0,43{58x17,0,43,3,58x17,59,43,4}]
+  options:
+    automatic-rename: 'off'
+  panes:
+  - cd /home/bk/Documents/Persona-BitBucket
+  - focus: 'true'
+    shell_command: cd /home/bk/Documents/sphero/nw
+  - shell_command:
+    - cd /home/bk
+    - ncmpcpp -s visualizer
+  - shell_command:
+    - cd /home/bk
+    - ncmpcpp -s clock
+  window_name: default

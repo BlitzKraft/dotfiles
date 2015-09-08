@@ -1,0 +1,33 @@
+session_name: work 
+windows:
+- focus: 'true'
+  layout: 10e9,195x53,0,0[195x19,0,0{133x19,0,0,1,61x19,134,0,2},195x18,0,20{133x18,0,20,3,61x18,134,20,7},195x14,0,39{98x14,0,39,4,96x14,99,39,5}]
+  options:
+    automatic-rename: 'off'
+  panes:
+  - shell_command: 
+    - cd /home/bk/Documents/Persona-BitBucket
+    - git ld
+  - shell_command:
+    - cd /home/bk
+    - task list proj:Work
+  - shell_command:
+    - ssh root@192.168.7.2
+  - focus: 'true'
+    shell_command: 
+    - cd /home/bk/.tmuxp
+    - task list proj:Home
+  - shell_command:
+    - cd /home/bk
+    - ncmpcpp -s visualizer
+  - shell_command:
+    - cd /home/bk
+    - ncmpcpp -s clock
+  window_name: default
+- layout: bd43,195x53,0,0,6
+  options:
+    automatic-rename: 'off'
+  panes:
+  - pane
+  start_directory: /home/bk
+  window_name: Shell
