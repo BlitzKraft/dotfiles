@@ -23,6 +23,7 @@ alias bashrf="source ~/.bashrc"
 alias c="clear"
 alias lsg="ls | grep -i $1"
 alias llg="ll | grep -i $1"
+alias lag="ls -a | grep -i $1"
 alias cc="xclip -selection clipboard /dev/null" #Clear clipboard
 alias beagle="ssh root@beaglebone.local"
 
@@ -52,6 +53,9 @@ alias taskhome="clear; task list proj:Home"
 alias taskwork="clear; task list proj:Work"
 alias bb2internet="~/.scripts/connect-bb-internet"
 alias repower="powerline-daemon -k;sleep 2; powerline-daemon -q"
+
+
+#Endal
 
 
 

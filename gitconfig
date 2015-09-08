@@ -1,0 +1,22 @@
+[user]
+	name = BK Bolisetty
+	email = bk@squarefruitlabs.com
+
+[alias]
+	#List all aliases
+	la = "!git config -l | grep alias | cut -c 7-"
+	#Pretty looking list of files
+	ls = log --pretty=format:"%C(yellow)%h%Cred%d\\ %Creset%s%Cblue\\ [%cn]" --decorate
+	ll = log --pretty=format:"%C(yellow)%h%Cred%d\\ %Creset%s%Cblue\\ [%cn]" --decorate --numstat
+	#No color
+	lnc = log --pretty=format:"%h\\ %s\\ [%cn]"
+	#Show relative date (Ex: committed 30 hours ago)
+	ld = log --pretty=format:"%C(yellow)%h\\ %ad%Cred%d\\ %Creset%s%Cblue\\ [%cn]" --decorate --date=relative
+	#Show proper date and time	
+	lds = log --pretty=format:"%C(yellow)%h\\ %ad%Cred%d\\ %Creset%s%Cblue\\ [%cn]" --decorate --date=short
+	#git commit -m
+	cm = !git add -A && git commit -m
+	undo-commit = reset --soft HEAD^
+
+	#git undo 
+	#git config --global alias.undo-commit 'reset --soft HEAD^'	
