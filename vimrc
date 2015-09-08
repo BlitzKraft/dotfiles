@@ -24,3 +24,4 @@ inoremap <esc> <nop>
 set relativenumber
 set timeoutlen=300
 set showcmd
+"Comment to test rcm, the dotfile manager
