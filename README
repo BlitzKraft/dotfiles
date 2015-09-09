@@ -1,0 +1,26 @@
+#This is a list of files managed by rcm. Most of them work as is. 
+#tmux config needs to be renamed with json extension
+##adding the email and password is optional. 
+
+
+
+/home/bk/.bashrc -> /home/bk/.dotfiles/bashrc
+/home/bk/.gitconfig -> /home/bk/.dotfiles/gitconfig
+/home/bk/.local/lib/python2.7/site-packages/powerline/config_files/colorschemes/tmux/default.json -> /home/bk/.dotfiles/local/lib/python2.7/site-packages/powerline/config_files/colorschemes/tmux/default.json
+/home/bk/.local/lib/python2.7/site-packages/powerline/config_files/themes/tmux/default.n0idpass -> /home/bk/.dotfiles/local/lib/python2.7/site-packages/powerline/config_files/themes/tmux/default.n0idpass
+/home/bk/.local/lib/python2.7/site-packages/powerline/segments/common/players.py -> /home/bk/.dotfiles/local/lib/python2.7/site-packages/powerline/segments/common/players.py
+/home/bk/.mpd/mpd.conf -> /home/bk/.dotfiles/mpd/mpd.conf
+/home/bk/.mpd/playlists/All.m3u -> /home/bk/.dotfiles/mpd/playlists/All.m3u
+/home/bk/.mpd/playlists/favorites.m3u -> /home/bk/.dotfiles/mpd/playlists/favorites.m3u
+/home/bk/.mpd/playlists/FemaleArtists.m3u -> /home/bk/.dotfiles/mpd/playlists/FemaleArtists.m3u
+/home/bk/.mpd/playlists/instrumentals.m3u -> /home/bk/.dotfiles/mpd/playlists/instrumentals.m3u
+/home/bk/.ncmpcpp/config -> /home/bk/.dotfiles/ncmpcpp/config
+/home/bk/.README -> /home/bk/.dotfiles/README
+/home/bk/.scripts/connect-bb-internet -> /home/bk/.dotfiles/scripts/connect-bb-internet
+/home/bk/.scripts/favicon.png -> /home/bk/.dotfiles/scripts/favicon.png
+/home/bk/.scripts/home.html -> /home/bk/.dotfiles/scripts/home.html
+/home/bk/.scripts/theme.css -> /home/bk/.dotfiles/scripts/theme.css
+/home/bk/.tmux.conf -> /home/bk/.dotfiles/tmux.conf
+/home/bk/.tmuxp/work-large.yaml -> /home/bk/.dotfiles/tmuxp/work-large.yaml
+/home/bk/.tmuxp/work-small-full.yaml -> /home/bk/.dotfiles/tmuxp/work-small-full.yaml
+/home/bk/.vimrc -> /home/bk/.dotfiles/vimrc
