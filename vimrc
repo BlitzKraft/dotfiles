@@ -14,16 +14,21 @@ let g:powerline#extensions#tabline#enabled = 1
 let g:powerline#extensions#tabline#fnamemod = ':t'
 
 " toggle invisible characters
-set invlist
+"set invlist
+map <F6> :set invlist!<CR>
 set listchars=tab:▸\ ,eol:¬,trail:⋅,extends:❯,precedes:❮
-highlight SpecialKey ctermbg=none " make the highlighting of tabs less annoying
+" make the highlighting of tabs less annoying
+highlight SpecialKey ctermbg=none 
 set showbreak=↪
 
+"Use 'jk' as escape instead of escape.
 inoremap jk <esc>
 inoremap <esc> <nop>
 set relativenumber
 set timeoutlen=300
 set showcmd
-"Comment to test rcm, the dotfile manager
 
-:map <F5> :setlocal spell! spelllang=en_us<CR>
+map <F5> :setlocal spell! spelllang=en_us<CR>
+
+"Show tab line above
+set showtabline=2
