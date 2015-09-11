@@ -26,8 +26,9 @@ alias la="ls -a"
 alias lsg="ls | grep -i $1"
 alias llg="ll | grep -i $1"
 alias lag="ls -a | grep -i $1"
-alias cc="xclip -selection clipboard /dev/null" #Clear clipboard
 alias beagle="ssh root@beaglebone.local"
+alias lsc="ls --color=always"
+alias grepc="grep --color=always" 
 
 #List all aliases
 #Most of it is make it look pretty. Show heading columns, numbers and colors
@@ -55,6 +56,7 @@ alias taskhome="clear; task list proj:Home"
 alias taskwork="clear; task list proj:Work"
 alias bb2internet="~/.scripts/connect-bb-internet"
 alias repower="powerline-daemon -k;sleep 2; powerline-daemon -q"
+alias cc="xclip -selection clipboard /dev/null" #Clear clipboard
 
 #lsrc is from rcm, a dotfile managing utility
 alias lsrc="lsrc | sed 's/:/ -> /g'"
