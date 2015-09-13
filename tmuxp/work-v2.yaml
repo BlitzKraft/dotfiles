@@ -1,0 +1,12 @@
+session_name: 'focus' 
+windows:
+- focus: 'true'
+  layout: a1af,194x50,0,0{152x50,0,0,11,41x50,153,0[41x15,153,0,12,41x17,153,16,13,41x16,153,34,14]}
+  options: {}
+  panes:
+  - pane
+  - pane
+  - ncmpcpp -s visualizer
+  - ncmpcpp -s clock
+  start_directory: /home/bk
+  window_name: bash
