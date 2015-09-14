@@ -27,6 +27,7 @@ alias lsg="ls | grep -i $1"
 alias llg="ll | grep -i $1"
 alias lag="ls -a | grep -i $1"
 alias beagle="ssh root@beaglebone.local"
+alias beaglet="ssh root@beaglebone.local -t tmux a"
 alias lsc="ls --color=always"
 alias grepc="grep --color=always" 
 
