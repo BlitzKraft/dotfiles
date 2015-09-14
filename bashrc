@@ -37,6 +37,7 @@ alias listall="echo -e '\e[31m\e[1mNo.\tAlias\t\tCommand\e[0m';cat ~/.bashrc | g
 
 #Edit alias file
 alias edalias="vim ~/.bashrc"
+alias edgit="vim ~/.gitconfig"
 
 #Useful apt get aliases
 alias aptget="sudo apt-get"
