@@ -30,6 +30,7 @@ alias beagle="ssh root@beaglebone.local"
 alias beaglet="ssh root@beaglebone.local -t tmux a"
 alias lsc="ls --color=always"
 alias grepc="grep --color=always" 
+alias checkkarma="bash ~/.scripts/checkkarma"
 
 #List all aliases
 #Most of it is make it look pretty. Show heading columns, numbers and colors
