@@ -129,6 +129,9 @@ function _update_ps1() {
 export PROMPT_COMMAND="_update_ps1; $PROMPT_COMMAND"
 export TERM="xterm-256color"
 
+
+
+
 ############################
 #Arduino variables - Global#
 ############################
