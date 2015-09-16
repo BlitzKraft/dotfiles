@@ -1,14 +1,22 @@
 #!/bin/bash
 
+#Application of this command: curl -s http://www.reddit.com/user/$username/about.json | tr "," "\n" | grep "karma" 
 #Array of usernames separated by spaces
 users=(BlitzKraft aaronitesWife mythieesWife angrypotato0 The_Dr_B1B)
 
 for i in "${users[@]}"
 do
+	#Output username, in red
 	echo -e "\e[31m\e[1m$i\e[0m"
+	#Save the response from reddit, to save on number of requests
+	#Replacing the comma with a new line(server returns json)
 	output=$(curl -s http://www.reddit.com/user/$i/about.json | tr "," "\n") 
+	#Search for link karma field, separate the number and present it to stdout
 	echo "$output" | grep "link_karma" | tr ": " "\n" | grep -E "[0-9]+" | sed s/"^"/"\tLink Karma: "/	
-	echo "$output" | grep "comment_karma" | tr ": " "\n" | grep -E "[0-9]+" | sed s/"^"/"\tComment Karma: "/	
-	echo -en "\n"
+	#Wait; this is only to put some delay between requests. To not get IP blocked due to DDoS
 	sleep 1
+	#Same as for link karma above
+	echo "$output" | grep "comment_karma" | tr ": " "\n" | grep -E "[0-9]+" | sed s/"^"/"\tComment Karma: "/	
+	#New line before we move on to new user
+	echo -en "\n"
 done
