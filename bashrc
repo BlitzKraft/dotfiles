@@ -20,6 +20,8 @@ alias histg="history | grep"
 #Duh
 alias myip="curl http://ipecho.net/plain; echo"
 alias pingtest="ping -c 5 google.com"
+alias localip="ifconfig | grep -A3 wlan0 | grep \"inet \" | sed -e 's/^[[:space:]]*//' | cut -d \" \" -f2 | cut -d : -f2"
+alias localipv6="ifconfig | grep -A3 wlan0 | grep inet6 | sed -e 's/^[[:space:]]*//' | cut -d \" \" -f3"
 alias bashrf="source ~/.bashrc"
 alias c="clear"
 alias la="ls -a"
@@ -33,7 +35,7 @@ alias grepc="grep --color=always"
 alias checkkarma="bash ~/.scripts/checkkarma"
 
 #Returns world population at the moment
-alias pop="curl -s http://www.census.gov/popclock/data/population/world | python -c 'import json,sys;obj=json.load(sys.stdin);print obj["world"]["population"]'"
+alias pop="curl -s http://www.census.gov/popclock/data/population/world | python -c 'import json,sys;obj=json.load(sys.stdin);print obj[\"world\"][\"population\"]'"
 
 #List all aliases
 #Most of it is make it look pretty. Show heading columns, numbers and colors
