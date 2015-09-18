@@ -11,6 +11,9 @@ call vundle#begin()
 Plugin 'VundleVim/Vundle.vim'
 
 Plugin 'mattn/emmet-vim'
+Plugin 'jdkanani/vim-material-theme'
+Plugin 'Valloric/YouCompleteMe'
+Plugin 't9md/vim-choosewin'
 " The following are examples of different formats supported.
 " Keep Plugin commands between vundle#begin/end.
 
@@ -60,5 +63,11 @@ set showcmd
 
 map <F5> :setlocal spell! spelllang=en_us<CR>
 
+set background=dark
+colorscheme material-theme 
+
 "Show tab line above
 set showtabline=2
+hi Normal ctermbg=None
+syntax enable
+let g:choosewin_overlay_enable = 1

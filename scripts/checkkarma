@@ -2,7 +2,7 @@
 
 #Application of this command: curl -s http://www.reddit.com/user/$username/about.json | tr "," "\n" | grep "karma" 
 #Array of usernames separated by spaces
-users=(BlitzKraft aaronitesWife mythieesWife angrypotato0 The_Dr_B1B)
+users=(BlitzKraft aaronitesWife mythieesWife angrypotato0 The_Dr_B1B oedipusJack)
 
 for i in "${users[@]}"
 do
