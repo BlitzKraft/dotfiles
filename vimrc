@@ -12,8 +12,10 @@ Plugin 'VundleVim/Vundle.vim'
 
 Plugin 'mattn/emmet-vim'
 Plugin 'jdkanani/vim-material-theme'
-Plugin 'Valloric/YouCompleteMe'
+" Plugin 'Valloric/YouCompleteMe'
 Plugin 't9md/vim-choosewin'
+Plugin 'jplaut/vim-arduino-ino'
+Plugin 'sudar/vim-arduino-syntax'
 " The following are examples of different formats supported.
 " Keep Plugin commands between vundle#begin/end.
 
@@ -39,6 +41,7 @@ set laststatus=2
 " Use 256 colours (Use this setting only if your terminal supports 256 colours)
 set t_Co=256
 au! BufRead,BufNewFile *.scad set filetype=openscad
+au! BufRead,BufNewFile *.ino,*.pde set filetype=arduino
 
 " Enable the list of buffers
 let g:powerline#extensions#tabline#enabled = 1
@@ -58,7 +61,7 @@ set showbreak=↪
 inoremap jk <esc>
 inoremap <esc> <nop>
 set relativenumber
-set timeoutlen=300
+set timeoutlen=1000
 set showcmd
 
 map <F5> :setlocal spell! spelllang=en_us<CR>
@@ -71,3 +74,4 @@ set showtabline=2
 hi Normal ctermbg=None
 syntax enable
 let g:choosewin_overlay_enable = 1
+let mapleader=","
