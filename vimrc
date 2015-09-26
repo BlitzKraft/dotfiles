@@ -16,6 +16,7 @@ Plugin 'jdkanani/vim-material-theme'
 Plugin 't9md/vim-choosewin'
 Plugin 'jplaut/vim-arduino-ino'
 Plugin 'sudar/vim-arduino-syntax'
+Plugin 'sophacles/vim-processing'
 " The following are examples of different formats supported.
 " Keep Plugin commands between vundle#begin/end.
 
@@ -75,3 +76,5 @@ hi Normal ctermbg=None
 syntax enable
 let g:choosewin_overlay_enable = 1
 let mapleader=","
+
+noremap <Leader>np :!mpc toggle -q <CR><CR>
