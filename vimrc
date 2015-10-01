@@ -77,4 +77,7 @@ syntax enable
 let g:choosewin_overlay_enable = 1
 let mapleader=","
 
-noremap <Leader>np :!mpc toggle -q <CR><CR>
+
+noremap <Leader>nP :!mpc toggle -q <CR><CR>
+noremap <Leader>nn :!mpc next -q <CR><CR>
+noremap <Leader>np :!mpc prev -q <CR><CR>
