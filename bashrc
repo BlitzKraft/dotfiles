@@ -33,6 +33,7 @@ alias beaglet="ssh root@beaglebone.local -t tmux a"
 alias lsc="ls --color=always"
 alias grepc="grep --color=always" 
 alias checkkarma="bash ~/.scripts/checkkarma"
+alias listwifi="sudo iwlist wlan0 scan | sift -e ESSID -e Address -e Quality -e Encryption | head -32"
 
 #Returns world population at the moment
 alias pop="curl -s http://www.census.gov/popclock/data/population/world | python -c 'import json,sys;obj=json.load(sys.stdin);print obj[\"world\"][\"population\"]'"
