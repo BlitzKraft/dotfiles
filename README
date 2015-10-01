@@ -7,6 +7,7 @@
 /home/bk/.bashrc -> /home/bk/.dotfiles/bashrc
 /home/bk/.gitconfig -> /home/bk/.dotfiles/gitconfig
 /home/bk/.local/lib/python2.7/site-packages/powerline/config_files/colorschemes/tmux/default.json -> /home/bk/.dotfiles/local/lib/python2.7/site-packages/powerline/config_files/colorschemes/tmux/default.json
+/home/bk/.local/lib/python2.7/site-packages/powerline/config_files/config.json -> /home/bk/.dotfiles/local/lib/python2.7/site-packages/powerline/config_files/config.json
 /home/bk/.local/lib/python2.7/site-packages/powerline/config_files/themes/tmux/default.n0idpass -> /home/bk/.dotfiles/local/lib/python2.7/site-packages/powerline/config_files/themes/tmux/default.n0idpass
 /home/bk/.local/lib/python2.7/site-packages/powerline/segments/common/players.py -> /home/bk/.dotfiles/local/lib/python2.7/site-packages/powerline/segments/common/players.py
 /home/bk/.mpd/mpd.conf -> /home/bk/.dotfiles/mpd/mpd.conf
@@ -16,6 +17,7 @@
 /home/bk/.mpd/playlists/instrumentals.m3u -> /home/bk/.dotfiles/mpd/playlists/instrumentals.m3u
 /home/bk/.ncmpcpp/config -> /home/bk/.dotfiles/ncmpcpp/config
 /home/bk/.README -> /home/bk/.dotfiles/README
+/home/bk/.scripts/checkkarma -> /home/bk/.dotfiles/scripts/checkkarma
 /home/bk/.scripts/connect-bb-internet -> /home/bk/.dotfiles/scripts/connect-bb-internet
 /home/bk/.scripts/favicon.png -> /home/bk/.dotfiles/scripts/favicon.png
 /home/bk/.scripts/home.html -> /home/bk/.dotfiles/scripts/home.html
@@ -23,4 +25,5 @@
 /home/bk/.tmux.conf -> /home/bk/.dotfiles/tmux.conf
 /home/bk/.tmuxp/work-large.yaml -> /home/bk/.dotfiles/tmuxp/work-large.yaml
 /home/bk/.tmuxp/work-small-full.yaml -> /home/bk/.dotfiles/tmuxp/work-small-full.yaml
+/home/bk/.tmuxp/work-v2.yaml -> /home/bk/.dotfiles/tmuxp/work-v2.yaml
 /home/bk/.vimrc -> /home/bk/.dotfiles/vimrc
