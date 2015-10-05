@@ -9,6 +9,7 @@ alias sphero="cd ~/Documents/sphero"
 alias ..="cd .."
 alias power="cd ~/.local/lib/python2.7/site-packages/powerline"
 alias dot="cd ~/.dotfiles/"
+alias mk="mkdir"
 
 #Find a running process
 alias psg="ps aux | grep -v grep | grep -i -e VSZ -e"
@@ -34,6 +35,8 @@ alias lsc="ls --color=always"
 alias grepc="grep --color=always" 
 alias checkkarma="bash ~/.scripts/checkkarma"
 alias listwifi="sudo iwlist wlan0 scan | sift -e ESSID -e Address -e Quality -e Encryption | head -32"
+alias nvis="ncmpcpp -s visualizer"
+alias nclk="ncmpcpp -s clock"
 
 #Returns world population at the moment
 alias pop="curl -s http://www.census.gov/popclock/data/population/world | python -c 'import json,sys;obj=json.load(sys.stdin);print obj[\"world\"][\"population\"]'"
