@@ -1,0 +1,31 @@
+session_name: work
+windows:
+- layout: cb44,194x50,0,0{151x50,0,0,1,42x50,152,0[42x36,152,0,2,42x13,152,37,8]}
+  options:
+    automatic-rename: 'off'
+  panes:
+  - focus: 'true'
+    shell_command: cd /home/bk/sketchbook
+  - shell_command:
+    - cd /home/bk
+    - ncmpcpp
+  - shell_command:
+    - cd /home/bk
+    - ncmpcpp
+  window_name: </>
+- focus: 'true'
+  layout: b0c4,194x50,0,0,7
+  options:
+    automatic-rename: 'off'
+  panes:
+  - pane
+  start_directory: /home/bk/.tmuxp
+  window_name: '>_'
+- layout: b0c6,194x50,0,0,9
+  options:
+    automatic-rename: 'off'
+  panes:
+  - focus: 'true'
+    shell_command: ncmpcpp
+  start_directory: /home/bk
+  window_name: "\u266C"
