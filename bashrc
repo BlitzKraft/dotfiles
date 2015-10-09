@@ -123,8 +123,8 @@ fi
 }
 
 
-if [ -f ~/.local/lib/python2.7/site-packages/powerline/bindings/bash/powerline.sh ]; then
-    source ~/.local/lib/python2.7/site-packages/powerline/bindings/bash/powerline.sh
+if [ -f /usr/local/lib/python2.7/dist-packages/powerline/bindings/bash/powerline.sh ]; then
+    source /usr/local/lib/python2.7/dist-packages/powerline/bindings/bash/powerline.sh
 fi
 
 if [ -d "$HOME/.local/bin" ]; then
@@ -134,6 +134,9 @@ fi
 function _update_ps1() {
    export PS1="$(~/powerline-shell.py $? 2> /dev/null)"
 }
+
+#function weather(){ curl -s "http://api.wunderground.com/auto/wui/geo/ForecastXML/index.xml?query=${@:-<YOURZIPORLOCATION>}"|perl -ne '/<title>([^<]+)/&&printf "%s: ",$1;/<fcttext>([^<]+)/&&print $1,"\n"';}
+
 
 export PROMPT_COMMAND="_update_ps1; $PROMPT_COMMAND"
 export TERM="xterm-256color"
@@ -147,4 +150,4 @@ export TERM="xterm-256color"
 
 export ARDUINO_DIR=/usr/bin/arduino
 
-
+export RTV_EDITOR=vim

@@ -13,10 +13,11 @@ Plugin 'VundleVim/Vundle.vim'
 Plugin 'mattn/emmet-vim'
 Plugin 'jdkanani/vim-material-theme'
 " Plugin 'Valloric/YouCompleteMe'
-Plugin 't9md/vim-choosewin'
+" Plugin 't9md/vim-choosewin'
 Plugin 'jplaut/vim-arduino-ino'
 Plugin 'sudar/vim-arduino-syntax'
 Plugin 'sophacles/vim-processing'
+Plugin 'powerline/powerline', {'rtp': 'powerline/bindings/vim/'}
 " The following are examples of different formats supported.
 " Keep Plugin commands between vundle#begin/end.
 
@@ -34,8 +35,9 @@ filetype plugin indent on    " required
 "
 " see :h vundle for more details or wiki for FAQ
 " Put your non-Plugin stuff after this line
-set rtp+=$HOME/.local/lib/python2.7/site-packages/powerline/bindings/vim/
 
+" set rtp+=$HOME/.local/lib/python2.7/site-packages/powerline/bindings/vim/
+"set rtp+=$HOME/.local/lib/python2.7/site-packages/powerline/bindings/vim/
 " Always show statusline
 set laststatus=2
 
@@ -75,9 +77,12 @@ set showtabline=2
 hi Normal ctermbg=None
 syntax enable
 let g:choosewin_overlay_enable = 1
+"set choose win shortcut
+"nmap - <Plug>(choosewin)
 let mapleader=","
 
 
 noremap <Leader>nP :!mpc toggle -q <CR><CR>
 noremap <Leader>nn :!mpc next -q <CR><CR>
 noremap <Leader>np :!mpc prev -q <CR><CR>
+
