@@ -67,7 +67,7 @@ visualizer_fifo_path = "/home/bk/.mpd.fifo"
 visualizer_output_name = "fifo"
 visualizer_sync_interval = "15"
 visualizer_type = "spectrum"
-visualizer_look = "●▋"   (used to be this |▮ )
+visualizer_look = "●|"   #▋"  ## (used to be this |▮ )
 visualizer_color = "cyan"
 
 #Clock settings
@@ -87,3 +87,4 @@ ask_before_clearing_playlists = "yes"
 song_status_format="%f - %D"
 
 default_tag_editor_left_col="dirs"
+visualizer_in_stereo="yes"
