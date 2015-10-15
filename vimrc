@@ -86,3 +86,5 @@ noremap <Leader>nP :!mpc toggle -q <CR><CR>
 noremap <Leader>nn :!mpc next -q <CR><CR>
 noremap <Leader>np :!mpc prev -q <CR><CR>
 
+:set cursorline
+:hi CursorLine cterm=NONE ctermbg=235 ctermfg=none

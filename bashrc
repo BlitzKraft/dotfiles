@@ -10,6 +10,7 @@ alias ..="cd .."
 alias power="cd ~/.local/lib/python2.7/site-packages/powerline"
 alias dot="cd ~/.dotfiles/"
 alias mk="mkdir"
+alias cdht="cd ~/Documents/Persona-BitBucket/httpd"
 
 #Find a running process
 alias psg="ps aux | grep -v grep | grep -i -e VSZ -e"
