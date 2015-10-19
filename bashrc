@@ -76,7 +76,8 @@ alias cc="xclip -selection clipboard /dev/null" #Clear clipboard
 
 #lsrc is from rcm, a dotfile managing utility
 alias lsrc="lsrc | sed 's/:/ -> /g'"
-
+alias setnwid="tmux resize-pane -x 44; ncmpcpp -s visualizer"
+alias setnhgt="tmux resize-pane -y 15; ncmpcpp -s clock"
 
 #Endal
 
