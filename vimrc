@@ -18,6 +18,10 @@ Plugin 'jplaut/vim-arduino-ino'
 Plugin 'sudar/vim-arduino-syntax'
 Plugin 'sophacles/vim-processing'
 Plugin 'powerline/powerline', {'rtp': 'powerline/bindings/vim/'}
+
+" Plugin for less (css)
+Plugin 'JulesWang/css.vim'
+Plugin 'genoma/vim-less'
 " The following are examples of different formats supported.
 " Keep Plugin commands between vundle#begin/end.
 
