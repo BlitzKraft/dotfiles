@@ -42,6 +42,7 @@ alias mouseright="xmodmap -e \"pointer = 3 2 1\""
 alias mouseleft="xmodmap -e \"pointer = 1 2 3\"" 
 alias ipsave="/home/bk/.scripts/ipsave"
 alias tailip="tail ~/.ip.log"
+alias setbg="gconftool-2 -s -t float /apps/gnome-terminal/profiles/Default/background_darkness "
 
 #Returns world population at the moment
 alias pop="curl -s http://www.census.gov/popclock/data/population/world | python -c 'import json,sys;obj=json.load(sys.stdin);print obj[\"world\"][\"population\"]'"
