@@ -92,3 +92,6 @@ noremap <Leader>np :!mpc prev -q <CR><CR>
 
 :set cursorline
 :hi CursorLine cterm=NONE ctermbg=235 ctermfg=none
+
+" Compile css.less to css.css
+noremap <Leader>lc :!lessc css.less css.css <CR>
