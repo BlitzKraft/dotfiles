@@ -1,0 +1,3 @@
+exip=$(curl -s http://ipecho.net/plain; echo);
+inip=$(ifconfig | grep -A3 wlan0 | grep "inet " | sed -e 's/^[[:space:]]*//' | cut -d " " -f2 | cut -d : -f2);
+echo -e $(date) '\t' $exip '\t' $inip >> ~/.ip.log;
