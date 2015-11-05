@@ -44,13 +44,14 @@ alias ipsave="/home/bk/.scripts/ipsave"
 alias tailip="tail ~/.ip.log"
 alias setbg="gconftool-2 -s -t float /apps/gnome-terminal/profiles/Default/background_darkness "
 alias mpstat="mpc status"
+alias bc="bc -l"
 
 #Returns world population at the moment
 alias pop="curl -s http://www.census.gov/popclock/data/population/world | python -c 'import json,sys;obj=json.load(sys.stdin);print obj[\"world\"][\"population\"]'"
 
 #List all alis
 #Most of it is make it look pretty. Show heading columns, numbers and colors
-alias listall="echo -e '\e[31m\e[1mNo.\tAlias\t\tCommand\e[0m';grep alias ~/.bashrc |cut -d' ' -f2- | sed 's/\=/\t\t/g' | nl -w 2 | more"
+alias listall="echo -e '\e[31m\e[1mNo.\tAlias\t\tCommand\e[0m';grep alias ~/.bashrc |cut -d' ' -f2- | sed 's/\=/\t\t/g' | nl -w 2"
 
 #Edit this file
 alias edalias="vim ~/.bashrc"
