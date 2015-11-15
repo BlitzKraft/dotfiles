@@ -95,3 +95,7 @@ noremap <Leader>np :!mpc prev -q <CR><CR>
 
 " Compile css.less to css.css
 noremap <Leader>lc :!lessc css.less css.css <CR>
+
+" Map tab and shif tab to switch buffers
+:nnoremap <Tab> :bnext<CR>
+:nnoremap <S-Tab> :bprevious<CR>
