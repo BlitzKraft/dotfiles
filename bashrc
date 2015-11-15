@@ -45,6 +45,8 @@ alias tailip="tail ~/.ip.log"
 alias setbg="gconftool-2 -s -t float /apps/gnome-terminal/profiles/Default/background_darkness "
 alias mpstat="mpc status"
 alias bc="bc -l"
+alias xsel="xsel -ib"
+alias xkcd="cd ~/xkcd_archive"
 
 #Returns world population at the moment
 alias pop="curl -s http://www.census.gov/popclock/data/population/world | python -c 'import json,sys;obj=json.load(sys.stdin);print obj[\"world\"][\"population\"]'"
@@ -55,8 +57,10 @@ alias listall="echo -e '\e[31m\e[1mNo.\tAlias\t\tCommand\e[0m';grep alias ~/.bas
 
 #Edit this file
 alias edalias="vim ~/.bashrc"
+
 #Edit git configs and shortcuts
 alias edgit="vim ~/.gitconfig"
+alias gstat="git status"
 
 #Useful apt get shortcuts
 alias aptget="sudo apt-get"
