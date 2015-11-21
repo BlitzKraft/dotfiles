@@ -27,3 +27,5 @@
 	#git config --global alias.undo-commit 'reset --soft HEAD^'	
 [push]
 	default = simple
+[core]
+	editor = vim
