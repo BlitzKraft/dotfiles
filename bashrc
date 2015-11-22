@@ -77,9 +77,7 @@ alias listfun="cat ~/.bashrc | grep function | cut -c 9-  "
 #Tmux
 alias twork="tmuxp load ~/.tmuxp/work-small-full.yaml"
 
-#task utils
-alias taskhome="clear; task list proj:Home"
-alias taskwork="clear; task list proj:Work"
+#some utilities
 alias bb2internet="~/.scripts/connect-bb-internet"
 alias repower="powerline-daemon -k;sleep 2; powerline-daemon -q"
 alias cc="xclip -selection clipboard /dev/null" #Clear clipboard
