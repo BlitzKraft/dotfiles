@@ -2,8 +2,10 @@
 
 #Application of this command: curl -s http://www.reddit.com/user/$username/about.json | tr "," "\n" | grep "karma" 
 #Array of usernames separated by spaces
-users=(BlitzKraft aaronitesWife mythieesWife angrypotato0 The_Dr_B1B oedipusJack)
+#TODO: Read usernames from a separate file instead
+users=(BlitzKraft aaronitesWife mythieesWife angrypotato0 The_Dr_B1B oedipusJack pw_is_donotchangepls)
 
+date
 for i in "${users[@]}"
 do
 	#Output username, in red
