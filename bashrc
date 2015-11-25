@@ -87,6 +87,9 @@ alias lsrc="lsrc | sed 's/:/ -> /g'"
 alias setnwid="tmux resize-pane -x 44; ncmpcpp -s visualizer"
 alias setnhgt="tmux resize-pane -y 15; ncmpcpp -s clock"
 
+
+#alias to fetch an image from the pi
+alias checkimage="scp pi@$RASPI:/home/pi/image.jpg ./image.jpg; feh image.jpg"
 #Endal
 
 
