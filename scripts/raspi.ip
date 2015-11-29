@@ -1,0 +1,12 @@
+#Raspi's Mac address (for the Ralink usb dongle)
+#00:C1:41:29:25:2D
+
+echo "Beginning scan..."
+mac="00:C1:41:29:25:2D"
+
+RASPI=$(sudo nmap -T5 -p22 192.168.0.2-254 | grep -B4 $mac | grep "scan report for" | tr " " "\n" | grep 192)
+
+echo $RASPI
+export RASPI 
+
+echo "End scan."
