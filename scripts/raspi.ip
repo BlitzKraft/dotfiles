@@ -1,5 +1,8 @@
 #Raspi's Mac address (for the Ralink usb dongle)
 #00:C1:41:29:25:2D
+#
+#Raspi's eth0 MAC
+#B8:27:EB:98:80:84
 
 echo "Beginning scan..."
 mac="00:C1:41:29:25:2D"

@@ -22,6 +22,8 @@ Plugin 'powerline/powerline', {'rtp': 'powerline/bindings/vim/'}
 " Plugin for less (css)
 Plugin 'JulesWang/css.vim'
 Plugin 'genoma/vim-less'
+
+
 " The following are examples of different formats supported.
 " Keep Plugin commands between vundle#begin/end.
 
@@ -96,6 +98,6 @@ noremap <Leader>np :!mpc prev -q <CR><CR>
 " Compile css.less to css.css
 noremap <Leader>lc :!lessc css.less css.css <CR>
 
-" Map tab and shif tab to switch buffers
+" Map tab and shift tab to switch buffers
 :nnoremap <Tab> :bnext<CR>
 :nnoremap <S-Tab> :bprevious<CR>
