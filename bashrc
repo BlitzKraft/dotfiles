@@ -47,7 +47,9 @@ alias getb="gconftool-2 -g /apps/gnome-terminal/profiles/Default/background_dark
 alias mpstat="mpc status"
 alias bc="bc -l"
 alias xsel="xsel -ib"
-alias xkcd="cd ~/xkcd_archive"
+alias xkcd="/home/bk/.scripts/xkcd.sh"
+alias xkcg="sift -ir $1 /home/bk/xkcd_archive"
+alias welcome="/home/bk/.scripts/welcome.sh"
 
 #Returns world population at the moment
 alias pop="curl -s http://www.census.gov/popclock/data/population/world | python -c 'import json,sys;obj=json.load(sys.stdin);print obj[\"world\"][\"population\"]'"
@@ -90,6 +92,7 @@ alias setnhgt="tmux resize-pane -y 15; ncmpcpp -s clock"
 
 #alias to fetch an image from the pi
 alias checkimage="scp pi@$RASPI:/home/pi/image.jpg ./image.jpg; feh image.jpg"
+
 #Endal
 
 
@@ -164,3 +167,5 @@ export TERM="xterm-256color"
 export ARDUINO_DIR=/usr/bin/arduino
 
 export RTV_EDITOR=vim
+
+/home/bk/.scripts/welcome.sh
