@@ -1,3 +1,4 @@
+#!/bin/bash
 #Raspi's Mac address (for the Ralink usb dongle)
 #00:C1:41:29:25:2D
 #
