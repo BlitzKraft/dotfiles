@@ -9,3 +9,4 @@ echo "Updated database"
 echo "Currently $count comics in db"
 last=$(ls | sort  -n | tail -1)
 echo "Latest comic is $last"
+notify-send "Updated xkcd database. Latest comic is $last."
