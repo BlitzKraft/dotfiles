@@ -23,7 +23,7 @@ Plugin 'powerline/powerline', {'rtp': 'powerline/bindings/vim/'}
 Plugin 'JulesWang/css.vim'
 Plugin 'genoma/vim-less'
 
-
+" set term=xterm-256color
 " The following are examples of different formats supported.
 " Keep Plugin commands between vundle#begin/end.
 

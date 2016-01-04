@@ -30,7 +30,6 @@ echo -e "------"
 echo "The weather at $myzip"
 weather $myzip
 echo "------"
-/home/bk/.scripts/ipsave
 echo "------"
 echo -en "\e[31m\e[1mTasks due\e[0m"
 task list
