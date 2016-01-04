@@ -55,6 +55,8 @@ alias btcprice="echo $(curl -s https://btc-e.com/api/2/btc_usd/ticker | json_pp 
 alias weechat="/usr/bin/bin/weechat"
 alias lines="wc -l" 
 alias remme="/home/bk/.scripts/remme"
+alias tmux="tmux -2"
+alias arduino="/home/bk/Downloads/arduino-1.6.6/arduino"
 
 #Returns world population at the moment
 alias pop="curl -s http://www.census.gov/popclock/data/population/world | python -c 'import json,sys;obj=json.load(sys.stdin);print obj[\"world\"][\"population\"]'"
@@ -174,3 +176,15 @@ export ARDUINO_DIR=/usr/bin/arduino
 export RTV_EDITOR=vim
 
 /home/bk/.scripts/welcome.sh
+
+##########################
+#DBUS session Bus address
+#This is for cron to push a notification to the x
+##########################
+touch $HOME/.dbus/Xdbus
+chmod 600 $HOME/.dbus/Xdbus
+env | grep DBUS_SESSION_BUS_ADDRESS > $HOME/.dbus/Xdbus
+echo 'export DBUS_SESSION_BUS_ADDRESS' >> $HOME/.dbus/Xdbus
+
+
+/home/bk/.scripts/ipsave
