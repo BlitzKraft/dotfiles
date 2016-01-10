@@ -791,6 +791,7 @@ VI_KEYS = {'j': "/window scroll_down",
            '~': key_tilda,
            #'nt': "/bar scroll nicklist * -100%",
            #'nT': "/bar scroll nicklist * +100%",
+           #F11/F12 keys for nicklist scrolling; same as in insert mode
            '\x01[[23~': "/bar scroll nicklist * -100%",
            '\x01[[24~': "/bar scroll nicklist * +100%",
            '\x01[[A': "/input history_previous",
