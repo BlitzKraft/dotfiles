@@ -55,7 +55,6 @@ alias btcprice="echo $(curl -s https://btc-e.com/api/2/btc_usd/ticker | json_pp 
 alias weechat="/usr/bin/bin/weechat"
 alias lines="wc -l" 
 alias remme="/home/bk/.scripts/remme"
-alias tmux="tmux -2"
 alias arduino="/home/bk/Downloads/arduino-1.6.6/arduino"
 
 #Returns world population at the moment
