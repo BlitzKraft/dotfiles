@@ -56,6 +56,7 @@ alias weechat="/usr/bin/bin/weechat"
 alias lines="wc -l" 
 alias remme="/home/bk/.scripts/remme"
 alias arduino="/home/bk/Downloads/arduino-1.6.6/arduino"
+alias cdx="cd /home/bk/xkcd_archive"
 
 #Returns world population at the moment
 alias pop="curl -s http://www.census.gov/popclock/data/population/world | python -c 'import json,sys;obj=json.load(sys.stdin);print obj[\"world\"][\"population\"]'"
