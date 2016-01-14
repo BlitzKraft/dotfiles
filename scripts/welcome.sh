@@ -13,7 +13,7 @@ weather $myzip | sift Temperature | sed -e 's/^[ \t]*//'
 echo -e "Connected to \033[42m$wifi\e[0m "
 echo -en "Bitcoin Exchange rate is \033[43m\e[1;33m\$"
 echo -e "$btcprice\e[0m"
-#echo "Network Info"
+echo "Network Info"
 echo -en "External IP	: \e[31m\e[1m"
 curl http://ipecho.net/plain; echo
 echo -ne "\e[0m"
