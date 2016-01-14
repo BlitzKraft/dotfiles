@@ -1,12 +1,11 @@
 #!/bin/bash
 
-cd ~;
-xkcd-dl --update-db > /dev/null;
-xkcd-dl --download-all > /dev/null;
-cd xkcd_archive;
-count=$(ls | wc -l)
-echo "Updated database"
-echo "Currently $count comics in db"
-last=$(ls | sort  -n | tail -1)
-echo "Latest comic is $last"
-notify-send "Updated xkcd database. Latest comic is $last."
+cd /home/bk
+/usr/local/bin/xkcd-dl --update-db  > /dev/null
+/usr/local/bin/xkcd-dl --download-all > /dev/null
+count=$(/bin/ls /home/bk/xkcd_archive/ | /usr/bin/wc -l)
+/bin/echo "Updated database"
+/bin/echo "Currently $count comics in db"
+last=$(/bin/ls /home/bk/xkcd_archive | /usr/bin/sort  -n | /usr/bin/tail -1)
+/bin/echo "Latest comic is $last"
+/usr/bin/notify-send "Updated xkcd database. Latest comic is $last."
