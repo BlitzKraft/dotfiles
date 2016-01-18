@@ -5,9 +5,7 @@
 #Navigation
 alias doc="cd ~/Documents"
 alias down="cd ~/Downloads"
-alias sphero="cd ~/Documents/sphero"
 alias ..="cd .."
-alias power="cd ~/.local/lib/python2.7/site-packages/powerline"
 alias dot="cd ~/.dotfiles/"
 alias mk="mkdir"
 alias cdht="cd ~/Documents/Persona-BitBucket/httpd"
@@ -15,6 +13,10 @@ alias cdht="cd ~/Documents/Persona-BitBucket/httpd"
 #Find a running process
 alias psg="ps aux | grep -v grep | grep -i -e VSZ -e"
 alias ps="ps auxf"
+
+#Powerline
+alias power="cd ~/.local/lib/python2.7/site-packages/powerline"
+alias repower="powerline-daemon -k;sleep 2; powerline-daemon -q"
 
 #Search command history
 alias histg="history | grep"
@@ -24,39 +26,70 @@ alias myip="curl http://ipecho.net/plain; echo"
 alias pingtest="ping -c 5 google.com"
 alias localip="ifconfig | grep -A3 wlan0 | grep \"inet \" | sed -e 's/^[[:space:]]*//' | cut -d \" \" -f2 | cut -d : -f2"
 alias localipv6="ifconfig | grep -A3 wlan0 | grep inet6 | sed -e 's/^[[:space:]]*//' | cut -d \" \" -f3"
-alias bashrf="source ~/.bashrc"
 alias c="clear"
+alias grepc="grep --color=always" 
+alias listwifi="sudo iwlist wlan0 scan | sift -e ESSID -e Address -e Quality -e Encryption | head -32"
+alias btcprice="echo $(curl -s https://btc-e.com/api/2/btc_usd/ticker | json_pp | grep last | cut -d : -f 2 | tr -d ,| tr -d " ")"
+
+#Refresh bash sources
+alias bashrf="source ~/.bashrc"
+
+#ls variations
 alias la="ls -a"
 alias lsg="ls | grep -i $1"
 alias llg="ll | grep -i $1"
 alias lag="ls -a | grep -i $1"
-alias beagle="ssh root@beaglebone.local"
-alias beaglet="ssh root@beaglebone.local -t tmux a"
 alias lsc="ls --color=always"
-alias grepc="grep --color=always" 
+
+#Reddit karma
 alias checkkarma="bash ~/.scripts/checkkarma"
-alias listwifi="sudo iwlist wlan0 scan | sift -e ESSID -e Address -e Quality -e Encryption | head -32"
+
+#ncmpcpp
 alias nvis="ncmpcpp -s visualizer"
 alias nclk="ncmpcpp -s clock"
+
+#Change mouse buttons
 alias mouseright="xmodmap -e \"pointer = 3 2 1\""
 alias mouseleft="xmodmap -e \"pointer = 1 2 3\"" 
+
+#Log current ip address (both external and local, ipv4 only)
 alias ipsave="/home/bk/.scripts/ipsave"
+#Show last 10 used ipaddresses
 alias tailip="tail ~/.ip.log"
+
+#Set or get background opacity in gnome-terminal
 alias setb="gconftool-2 -s -t float /apps/gnome-terminal/profiles/Default/background_darkness "
 alias getb="gconftool-2 -g /apps/gnome-terminal/profiles/Default/background_darkness"
+
+#mpc
 alias mpstat="mpc status"
 alias volume="mpc -q volume"
+
+#Enable float values. Keeps me sane
 alias bc="bc -l"
-alias xsel="xsel -ib"
-alias xkcd="/home/bk/.scripts/xkcd.sh"
-alias xkcg="sift -ir $1 /home/bk/xkcd_archive"
-alias welcome="/home/bk/.scripts/welcome.sh"
-alias btcprice="echo $(curl -s https://btc-e.com/api/2/btc_usd/ticker | json_pp | grep last | cut -d : -f 2 | tr -d ,| tr -d " ")"
-alias weechat="/usr/bin/bin/weechat"
-alias lines="wc -l" 
-alias remme="/home/bk/.scripts/remme"
-alias arduino="/home/bk/Downloads/arduino-1.6.6/arduino"
+
+#xkcd
+#Refresh xkcd archive
+#alias xkcd="/home/bk/.scripts/xkcd.sh"
+#Obsoleted by a cron job
+#Still the same script but manual invocation is not needed anymore.
 alias cdx="cd /home/bk/xkcd_archive"
+
+#sifting through the xkcd archive
+alias xkcg="sift -ir $1 /home/bk/xkcd_archive"
+
+#Welcome script
+alias welcome="/home/bk/.scripts/welcome.sh"
+
+#Botched the installation of weechat. FML
+alias weechat="/usr/bin/bin/weechat"
+
+#easier invocation
+alias lines="wc -l" 
+
+#Neat little script I found. Credits in file
+alias remme="/home/bk/.scripts/remme"
+alias suspend="/home/bk/.scripts/suspend"
 
 #Returns world population at the moment
 alias pop="curl -s http://www.census.gov/popclock/data/population/world | python -c 'import json,sys;obj=json.load(sys.stdin);print obj[\"world\"][\"population\"]'"
@@ -83,12 +116,8 @@ alias autoclean="sudo apt-get autoclean"
 #List functions
 alias listfun="cat ~/.bashrc | grep function | cut -c 9-  "
 
-#Tmux
-alias twork="tmuxp load ~/.tmuxp/work-small-full.yaml"
-
 #some utilities
 alias bb2internet="~/.scripts/connect-bb-internet"
-alias repower="powerline-daemon -k;sleep 2; powerline-daemon -q"
 alias cc="xclip -selection clipboard /dev/null" #Clear clipboard
 
 #lsrc is from rcm, a dotfile managing utility
@@ -96,13 +125,7 @@ alias lsrc="lsrc | sed 's/:/ -> /g'"
 alias setnwid="tmux resize-pane -x 44; ncmpcpp -s visualizer"
 alias setnhgt="tmux resize-pane -y 15; ncmpcpp -s clock"
 
-
-#alias to fetch an image from the pi
-alias checkimage="scp pi@$RASPI:/home/pi/image.jpg ./image.jpg; feh image.jpg"
-
 #Endal
-
-
 
 ###########
 #Functions#
@@ -160,20 +183,8 @@ function _update_ps1() {
 
 #function weather(){ curl -s "http://api.wunderground.com/auto/wui/geo/ForecastXML/index.xml?query=${@:-<YOURZIPORLOCATION>}"|perl -ne '/<title>([^<]+)/&&printf "%s: ",$1;/<fcttext>([^<]+)/&&print $1,"\n"';}
 
-
 export PROMPT_COMMAND="_update_ps1; $PROMPT_COMMAND"
 export TERM="xterm-256color"
-
-
-
-
-############################
-#Arduino variables - Global#
-############################
-
-export ARDUINO_DIR=/usr/bin/arduino
-
-export RTV_EDITOR=vim
 
 /home/bk/.scripts/welcome.sh
 
@@ -185,6 +196,5 @@ touch $HOME/.dbus/Xdbus
 chmod 600 $HOME/.dbus/Xdbus
 env | grep DBUS_SESSION_BUS_ADDRESS > $HOME/.dbus/Xdbus
 echo 'export DBUS_SESSION_BUS_ADDRESS' >> $HOME/.dbus/Xdbus
-
 
 /home/bk/.scripts/ipsave
