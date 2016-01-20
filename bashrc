@@ -52,6 +52,9 @@ alias nclk="ncmpcpp -s clock"
 alias mouseright="xmodmap -e \"pointer = 3 2 1\""
 alias mouseleft="xmodmap -e \"pointer = 1 2 3\"" 
 
+#Move mouse out of the way
+alias nomouse="xdotool mousemove 0 100"
+
 #Log current ip address (both external and local, ipv4 only)
 alias ipsave="/home/bk/.scripts/ipsave"
 #Show last 10 used ipaddresses
