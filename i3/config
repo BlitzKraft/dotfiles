@@ -39,11 +39,13 @@ bindsym $mod+Shift+q kill
 bindsym $mod+u border none
 
 # start dmenu (a program launcher)
-bindsym $mod+d exec dmenu_run
+#bindsym $mod+d exec dmenu_run
+#Start rofi instead
+#bindsym $mod+d  exec rofi -show run
 # There also is the (new) i3-dmenu-desktop which only displays applications
 # shipping a .desktop file. It is a wrapper around dmenu, so you need that
 # installed.
-# bindsym $mod+d exec --no-startup-id i3-dmenu-desktop
+bindsym $mod+d exec --no-startup-id i3-dmenu-desktop --dmenu='rofi -dmenu -p "run:"'
 
 # change focus
 bindsym $mod+h focus left
@@ -109,6 +111,7 @@ bindsym $mod+7 workspace 7
 bindsym $mod+8 workspace 8
 bindsym $mod+9 workspace 9
 bindsym $mod+0 workspace 10
+
 
 # move focused container to workspace
 bindsym $mod+Shift+1 move container to workspace 1
