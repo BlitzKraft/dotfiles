@@ -202,3 +202,4 @@ env | grep DBUS_SESSION_BUS_ADDRESS > $HOME/.dbus/Xdbus
 echo 'export DBUS_SESSION_BUS_ADDRESS' >> $HOME/.dbus/Xdbus
 
 /home/bk/.scripts/ipsave
+export RTV_EDITOR=vim
