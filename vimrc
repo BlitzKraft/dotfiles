@@ -14,10 +14,9 @@ Plugin 'mattn/emmet-vim'
 Plugin 'jdkanani/vim-material-theme'
 " Plugin 'Valloric/YouCompleteMe'
 " Plugin 't9md/vim-choosewin'
-Plugin 'jplaut/vim-arduino-ino'
 Plugin 'sudar/vim-arduino-syntax'
-Plugin 'sophacles/vim-processing'
 Plugin 'powerline/powerline', {'rtp': 'powerline/bindings/vim/'}
+Plugin 'plasticboy/vim-markdown'
 
 " Plugin for less (css)
 Plugin 'JulesWang/css.vim'
@@ -27,7 +26,7 @@ Plugin 'genoma/vim-less'
 Plugin 'vim-perl/vim-perl'
 
 " Duh!
-Plugin 'onur/vim-motivate'
+" Plugin 'onur/vim-motivate'
 " set term=xterm-256color
 " The following are examples of different formats supported.
 " Keep Plugin commands between vundle#begin/end.
