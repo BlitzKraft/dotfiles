@@ -67,7 +67,7 @@ alias getb="gconftool-2 -g /apps/gnome-terminal/profiles/Default/background_dark
 #mpc
 alias mpstat="mpc status"
 alias volume="mpc -q volume"
-alias mpdrate="mpd-rate"
+alias rate="mpd-rate"
 
 #Enable float values. Keeps me sane
 alias bc="bc -l"
