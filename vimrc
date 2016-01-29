@@ -24,6 +24,7 @@ Plugin 'genoma/vim-less'
 
 " Plugin for perl syntax
 Plugin 'vim-perl/vim-perl'
+Plugin 'vim-scripts/Drawit'
 
 " Duh!
 " Plugin 'onur/vim-motivate'
@@ -105,3 +106,4 @@ noremap <Leader>lc :!lessc css.less css.css <CR>
 " Map tab and shift tab to switch buffers
 :nnoremap <Tab> :bnext<CR>
 :nnoremap <S-Tab> :bprevious<CR>
+let g:vim_markdown_folding_disabled = 1
