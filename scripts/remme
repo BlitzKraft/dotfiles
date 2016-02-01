@@ -11,4 +11,4 @@ echo "notify-send --icon=dialog-information \"$title\" \"$message\"" | at ${1:1}
 else
 sleep $1 && notify-send --icon=dialog-information "$title" "$message" &
 fi
-
+date
