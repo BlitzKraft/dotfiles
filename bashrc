@@ -30,6 +30,7 @@ alias c="clear"
 alias grepc="grep --color=always" 
 alias listwifi="sudo iwlist wlan0 scan | sift -e ESSID -e Address -e Quality -e Encryption | head -32"
 alias btcprice="echo $(curl -s https://btc-e.com/api/2/btc_usd/ticker | json_pp | grep last | cut -d : -f 2 | tr -d ,| tr -d " ")"
+alias sc="sc-im"
 
 #Refresh bash sources
 alias bashrf="source ~/.bashrc"
