@@ -9,6 +9,7 @@ call vundle#begin()
 
 " let Vundle manage Vundle, required
 Plugin 'VundleVim/Vundle.vim'
+Plugin 'scrooloose/nerdtree.git'
 
 Plugin 'mattn/emmet-vim'
 Plugin 'jdkanani/vim-material-theme'
@@ -25,6 +26,7 @@ Plugin 'genoma/vim-less'
 " Plugin for perl syntax
 Plugin 'vim-perl/vim-perl'
 Plugin 'vim-scripts/Drawit'
+Plugin 'tpope/vim-rails'
 
 " Duh!
 " Plugin 'onur/vim-motivate'
@@ -107,3 +109,5 @@ noremap <Leader>lc :!lessc css.less css.css <CR>
 :nnoremap <Tab> :bnext<CR>
 :nnoremap <S-Tab> :bprevious<CR>
 let g:vim_markdown_folding_disabled = 1
+map <C-n> :NERDTreeToggle<CR>
+
