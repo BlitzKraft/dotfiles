@@ -9,6 +9,7 @@ alias ..="cd .."
 alias dot="cd ~/.dotfiles/"
 alias mk="mkdir"
 alias cdht="cd ~/Documents/Persona-BitBucket/httpd"
+alias cdv="cd ~/Documents/vendingmachine"
 
 #Find a running process
 alias psg="ps aux | grep -v grep | grep -i -e VSZ -e"
@@ -22,7 +23,7 @@ alias repower="powerline-daemon -k;sleep 2; powerline-daemon -q"
 alias histg="history | grep"
 
 #Duh
-alias myip="curl http://ipecho.net/plain; echo"
+alias myip="curl https://api.ipify.org/; echo"
 alias pingtest="ping -c 5 google.com"
 alias localip="ifconfig | grep -A3 wlan0 | grep \"inet \" | sed -e 's/^[[:space:]]*//' | cut -d \" \" -f2 | cut -d : -f2"
 alias localipv6="ifconfig | grep -A3 wlan0 | grep inet6 | sed -e 's/^[[:space:]]*//' | cut -d \" \" -f3"
@@ -66,9 +67,9 @@ alias setb="gconftool-2 -s -t float /apps/gnome-terminal/profiles/Default/backgr
 alias getb="gconftool-2 -g /apps/gnome-terminal/profiles/Default/background_darkness"
 
 #mpc
-alias mpstat="mpc status"
+alias mpstat='mpc status; echo -n "Rated: "; echo "$(mpd-rate)/5"'
 alias volume="mpc -q volume"
-alias rate="mpd-rate"
+alias rate="mpd-rate $1"
 
 #Enable float values. Keeps me sane
 alias bc="bc -l"
