@@ -1,0 +1,74 @@
+macro index,pager <F5> ":source ~/.mutt/vb<enter><change-folder> =INBOX<enter>"
+macro index,pager <F6> ":source ~/.mutt/bh<enter><change-folder> =INBOX<enter>"
+
+bind index G imap-fetch-mail
+
+
+##REMOTE GMAIL FOLDERS
+set folder = "imaps://imap.gmail.com:993"
+set spoolfile = "+INBOX"
+set postponed ="+[Google Mail]/Drafts"
+set trash = "+[Google Mail]/Trash"
+
+##LOCAL FOLDERS FOR CACHED HEADERS AND CERTIFICATES
+set header_cache =~/.mutt/cache/headers
+set message_cachedir =~/.mutt/cache/bodies
+set certificate_file =~/.mutt/certificates
+
+##SECURING
+set move = yes #Stop asking to "move read messages to mbox"!
+set imap_keepalive = 900
+
+##Sort by newest conversation first.
+set sort = reverse-threads
+set sort_aux = last-date-received
+
+##Set editor to create new email
+set editor='vim'
+
+mailboxes = "INBOX"
+
+##Color scheme
+color hdrdefault white black	#fg bg
+color header green black From
+color quoted cyan black 
+color signature red black
+
+set mailcap_path     = ~/.mutt/mailcap       # entries for filetypes
+set signature        = ~/.mutt/sig           # my signature file
+
+# Sidebar Patch 
+#set sidebar_delim   = ' │'
+set sidebar_visible = no
+set sidebar_width   = 24
+color sidebar_new color221 black #color233
+
+set sidebar_delim='|'
+set sidebar_sort=yes
+mailboxes =inbox =[Google Mail]/Drafts
+bind index CP sidebar-prev
+bind index CN sidebar-next
+bind index CO sidebar-open
+bind pager CP sidebar-prev
+bind pager CN sidebar-next
+bind pager CO sidebar-open
+macro index b '<enter-command>toggle sidebar_visible<enter>'
+macro pager b '<enter-command>toggle sidebar_visible<enter>'
+bind index B bounce-message
+
+#Don't ask, just do
+set delete
+set quit 
+
+#Page view settings
+set pager="builtin"
+set pager_context=5
+ignore * #first, ignore all headers
+unignore From To Reply-To Subject X-Mailer Cc Date 	#Now show only what I want
+hdr_order From: Date: To: Cc: Subject
+set tilde #Pads the end of emails with tilde like vim does
+
+
+set fast_reply #Doesn't produce too many prompts when replying
+source ~/.mutt/vb
+set sort_alias = alias
