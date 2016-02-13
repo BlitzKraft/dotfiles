@@ -1,0 +1,16 @@
+#Template for additional accounts on mutt
+#Change the following parameters to customize.
+#SMTP points to gmail server by default
+set imap_user = ''
+set imap_pass = ''
+
+set realname = ""
+
+##SMTP Settings to sent email
+set smtp_url = "smtp://<email>@smtp.gmail.com:587/"
+set smtp_pass = ""
+
+# Paths 
+set alias_file       = ~/.mutt/alias         # where to store aliases
+
+source ~/.mutt/alias
