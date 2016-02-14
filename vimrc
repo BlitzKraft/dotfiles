@@ -26,7 +26,11 @@ Plugin 'genoma/vim-less'
 " Plugin for perl syntax
 Plugin 'vim-perl/vim-perl'
 Plugin 'vim-scripts/Drawit'
+
 Plugin 'tpope/vim-rails'
+
+"Very dark color scheme
+Plugin 'whatyouhide/vim-gotham'
 
 " Duh!
 " Plugin 'onur/vim-motivate'
@@ -111,3 +115,24 @@ noremap <Leader>lc :!lessc css.less css.css <CR>
 let g:vim_markdown_folding_disabled = 1
 map <C-n> :NERDTreeToggle<CR>
 
+"" Some interesting stuff from Damien Conway
+""""""""""""""""""""""""""""""""""""""""""""
+"" Search improvements
+set incsearch ignorecase smartcase hlsearch
+"" hlsearch highlights all results
+"" Cleaning up after it
+nmap <silent> <BS> :nohlsearch <CR>
+"" Rotate swap files every ten key strokes
+set updatecount=10
+"" Global search and replace shortcut
+nmap S :%s//g<LEFT><LEFT>
+"" Use arrow keys to scroll buffers
+nmap <silent> <UP> :prev<CR>
+nmap <silent> <DOWN> :next<CR>
+
+"" Vim auto reload upon saving vimrc
+nmap <silent> :next $MYVIMRC<cr>
+augroup VimReload
+	autocmd!
+	autocmd BufWritePost $MYVIMRC source $MYVIMRC
+augroup END
