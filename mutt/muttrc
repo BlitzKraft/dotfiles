@@ -35,7 +35,6 @@ color quoted cyan black
 color signature red black
 
 set mailcap_path     = ~/.mutt/mailcap       # entries for filetypes
-set signature        = ~/.mutt/sig           # my signature file
 
 # Sidebar Patch 
 #set sidebar_delim   = ' │'
