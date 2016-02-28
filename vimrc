@@ -24,13 +24,13 @@ Plugin 'JulesWang/css.vim'
 Plugin 'genoma/vim-less'
 
 " Plugin for perl syntax
-Plugin 'vim-perl/vim-perl'
+" Plugin 'vim-perl/vim-perl'
 Plugin 'vim-scripts/Drawit'
 
 Plugin 'tpope/vim-rails'
 
-"Very dark color scheme
-Plugin 'whatyouhide/vim-gotham'
+" Taskwarrior plugin
+Plugin 'blindFS/vim-taskwarrior'
 
 " Duh!
 " Plugin 'onur/vim-motivate'
@@ -97,7 +97,6 @@ let g:choosewin_overlay_enable = 1
 "set choose win shortcut
 "nmap - <Plug>(choosewin)
 let mapleader=","
-
 
 noremap <Leader>nP :!mpc toggle -q <CR><CR>
 noremap <Leader>nn :!mpc next -q <CR><CR>
