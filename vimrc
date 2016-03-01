@@ -25,7 +25,7 @@ Plugin 'genoma/vim-less'
 
 " Plugin for perl syntax
 " Plugin 'vim-perl/vim-perl'
-Plugin 'vim-scripts/Drawit'
+" Plugin 'vim-scripts/Drawit'
 
 Plugin 'tpope/vim-rails'
 
@@ -129,9 +129,3 @@ nmap S :%s//g<LEFT><LEFT>
 nmap <silent> <UP> :prev<CR>
 nmap <silent> <DOWN> :next<CR>
 
-"" Vim auto reload upon saving vimrc
-nmap <silent> :next $MYVIMRC<cr>
-augroup VimReload
-	autocmd!
-	autocmd BufWritePost $MYVIMRC source $MYVIMRC
-augroup END
