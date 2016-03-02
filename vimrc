@@ -29,9 +29,6 @@ Plugin 'genoma/vim-less'
 
 Plugin 'tpope/vim-rails'
 
-" Taskwarrior plugin
-Plugin 'blindFS/vim-taskwarrior'
-
 " Duh!
 " Plugin 'onur/vim-motivate'
 " set term=xterm-256color
