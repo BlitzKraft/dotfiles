@@ -33,6 +33,9 @@ alias listwifi="sudo iwlist wlan0 scan | sift -e ESSID -e Address -e Quality -e 
 alias btcprice="echo $(curl -s https://btc-e.com/api/2/btc_usd/ticker | json_pp | grep last | cut -d : -f 2 | tr -d ,| tr -d " ")"
 alias sc="sc-im"
 
+# mutt open gmail bh directly
+alias muttg="mutt -F ~/.mutt/muttgrc"
+
 # Refresh bash sources
 alias bashrf="source ~/.bashrc"
 
