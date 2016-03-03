@@ -31,6 +31,8 @@ alias c="clear"
 alias grepc="grep --color=always" 
 alias listwifi="sudo iwlist wlan0 scan | sift -e ESSID -e Address -e Quality -e Encryption | head -32"
 alias btcprice="echo $(curl -s https://btc-e.com/api/2/btc_usd/ticker | json_pp | grep last | cut -d : -f 2 | tr -d ,| tr -d " ")"
+
+# Spread sheet calculator
 alias sc="sc-im"
 
 # mutt open gmail bh directly
@@ -45,6 +47,7 @@ alias lsg="ls | grep -i $1"
 alias llg="ll | grep -i $1"
 alias lag="ls -a | grep -i $1"
 alias lsc="ls --color=always"
+alias lsag="ls -a | grep "
 
 # Reddit karma
 alias checkkarma="bash ~/.scripts/checkkarma"
