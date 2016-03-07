@@ -27,8 +27,6 @@ set laststatus=2
 
 " Use 256 colours (Use this setting only if your terminal supports 256 colours)
 set t_Co=256
-au! BufRead,BufNewFile *.scad set filetype=openscad
-au! BufRead,BufNewFile *.ino,*.pde set filetype=arduino
 
 " Enable the list of buffers
 let g:powerline#extensions#tabline#enabled = 1
