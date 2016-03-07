@@ -1,0 +1,36 @@
+set nocompatible
+filetype off
+if filereadable(expand("/home/bk/.vim/vundles.vim"))
+	source ~/.vim/vundles.vim
+	source ~/.vim/damienConway.vim
+	source ~/.vim/leader.vim
+endif
+filetype plugin indent on
+set laststatus=2
+set t_Co=256
+au! BufRead,BufNewFile *.scad set filetype=openscad
+au! BufRead,BufNewFile *.ino,*.pde set filetype=arduino
+let g:powerline#extensions#tabline#enabled = 1
+let g:powerline#extensions#tabline#fnamemod = ':t'
+map <F6> :set invlist!<CR>
+set listchars=tab:▸\ ,eol:¬,trail:⋅,extends:❯,precedes:❮
+highlight SpecialKey ctermbg=none 
+set showbreak=↪
+inoremap jk <esc>
+inoremap <esc> <nop>
+set relativenumber
+set timeoutlen=1000
+set showcmd
+map <F5> :setlocal spell! spelllang=en_us<CR>
+set background=dark
+colorscheme material-theme 
+set showtabline=2
+hi Normal ctermbg=None
+syntax enable
+let g:choosewin_overlay_enable = 1
+:set cursorline
+:hi CursorLine cterm=NONE ctermbg=235 ctermfg=none
+:nnoremap <Tab> :bnext<CR>
+:nnoremap <S-Tab> :bprevious<CR>
+let g:vim_markdown_folding_disabled = 1
+map <C-n> :NERDTreeToggle<CR>

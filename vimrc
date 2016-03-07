@@ -1,42 +1,12 @@
 set nocompatible              " be iMproved, required
 filetype off                  " required
 
-" set the runtime path to include Vundle and initialize
-set rtp+=~/.vim/bundle/Vundle.vim
-call vundle#begin()
-" alternatively, pass a path where Vundle should install plugins
-"call vundle#begin('~/some/path/here')
+if filereadable(expand("/home/bk/.vim/vundles.vim"))
+	source ~/.vim/vundles.vim
+	source ~/.vim/damienConway.vim
+	source ~/.vim/leader.vim
+endif
 
-" let Vundle manage Vundle, required
-Plugin 'VundleVim/Vundle.vim'
-Plugin 'scrooloose/nerdtree.git'
-
-Plugin 'mattn/emmet-vim'
-Plugin 'jdkanani/vim-material-theme'
-" Plugin 'Valloric/YouCompleteMe'
-" Plugin 't9md/vim-choosewin'
-Plugin 'sudar/vim-arduino-syntax'
-Plugin 'powerline/powerline', {'rtp': 'powerline/bindings/vim/'}
-Plugin 'plasticboy/vim-markdown'
-
-" Plugin for less (css)
-Plugin 'JulesWang/css.vim'
-Plugin 'genoma/vim-less'
-
-" Plugin for perl syntax
-" Plugin 'vim-perl/vim-perl'
-" Plugin 'vim-scripts/Drawit'
-
-Plugin 'tpope/vim-rails'
-
-" Duh!
-" Plugin 'onur/vim-motivate'
-" set term=xterm-256color
-" The following are examples of different formats supported.
-" Keep Plugin commands between vundle#begin/end.
-
-" All of your Plugins must be added before the following line
-call vundle#end()            " required
 filetype plugin indent on    " required
 " To ignore plugin indent changes, instead use:
 "filetype plugin on
@@ -93,17 +63,9 @@ syntax enable
 let g:choosewin_overlay_enable = 1
 "set choose win shortcut
 "nmap - <Plug>(choosewin)
-let mapleader=","
-
-noremap <Leader>nP :!mpc toggle -q <CR><CR>
-noremap <Leader>nn :!mpc next -q <CR><CR>
-noremap <Leader>np :!mpc prev -q <CR><CR>
-
 :set cursorline
 :hi CursorLine cterm=NONE ctermbg=235 ctermfg=none
 
-" Compile css.less to css.css
-noremap <Leader>lc :!lessc css.less css.css <CR>
 
 " Map tab and shift tab to switch buffers
 :nnoremap <Tab> :bnext<CR>
@@ -111,18 +73,8 @@ noremap <Leader>lc :!lessc css.less css.css <CR>
 let g:vim_markdown_folding_disabled = 1
 map <C-n> :NERDTreeToggle<CR>
 
-"" Some interesting stuff from Damien Conway
-""""""""""""""""""""""""""""""""""""""""""""
-"" Search improvements
-set incsearch ignorecase smartcase hlsearch
-"" hlsearch highlights all results
-"" Cleaning up after it
-nmap <silent> <BS> :nohlsearch <CR>
-"" Rotate swap files every ten key strokes
-set updatecount=10
-"" Global search and replace shortcut
-nmap S :%s//g<LEFT><LEFT>
-"" Use arrow keys to scroll buffers
-nmap <silent> <UP> :prev<CR>
-nmap <silent> <DOWN> :next<CR>
-
+" Don't do things twice. 
+" :if !exists("autocommands_loaded")
+" :  let autocommands_loaded = 1
+" :  au ...
+" :endif
