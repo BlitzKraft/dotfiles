@@ -2,28 +2,47 @@
 #tmux config needs to be renamed with json extension
 ##adding the email and password is optional. 
 
-
-
+### Thu Mar 10 15:26:18 CST 2016
 /home/bk/.bashrc -> /home/bk/.dotfiles/bashrc
+/home/bk/.config/gtk-3.0/settings.ini -> /home/bk/.dotfiles/config/gtk-3.0/settings.ini
 /home/bk/.gitconfig -> /home/bk/.dotfiles/gitconfig
-/home/bk/.local/lib/python2.7/site-packages/powerline/config_files/colorschemes/tmux/default.json -> /home/bk/.dotfiles/local/lib/python2.7/site-packages/powerline/config_files/colorschemes/tmux/default.json
+/home/bk/.i3/config -> /home/bk/.dotfiles/i3/config
+/home/bk/.i3/i3status.conf -> /home/bk/.dotfiles/i3/i3status.conf
+/home/bk/.local/bin/lock -> /home/bk/.dotfiles/local/bin/lock
 /home/bk/.local/lib/python2.7/site-packages/powerline/config_files/config.json -> /home/bk/.dotfiles/local/lib/python2.7/site-packages/powerline/config_files/config.json
 /home/bk/.local/lib/python2.7/site-packages/powerline/config_files/themes/tmux/default.n0idpass -> /home/bk/.dotfiles/local/lib/python2.7/site-packages/powerline/config_files/themes/tmux/default.n0idpass
-/home/bk/.local/lib/python2.7/site-packages/powerline/segments/common/players.py -> /home/bk/.dotfiles/local/lib/python2.7/site-packages/powerline/segments/common/players.py
 /home/bk/.mpd/mpd.conf -> /home/bk/.dotfiles/mpd/mpd.conf
 /home/bk/.mpd/playlists/All.m3u -> /home/bk/.dotfiles/mpd/playlists/All.m3u
 /home/bk/.mpd/playlists/favorites.m3u -> /home/bk/.dotfiles/mpd/playlists/favorites.m3u
 /home/bk/.mpd/playlists/FemaleArtists.m3u -> /home/bk/.dotfiles/mpd/playlists/FemaleArtists.m3u
 /home/bk/.mpd/playlists/instrumentals.m3u -> /home/bk/.dotfiles/mpd/playlists/instrumentals.m3u
+/home/bk/.mutt/muttrc -> /home/bk/.dotfiles/mutt/muttrc
+/home/bk/.mutt/template -> /home/bk/.dotfiles/mutt/template
 /home/bk/.ncmpcpp/config -> /home/bk/.dotfiles/ncmpcpp/config
+/home/bk/.players.py -> /home/bk/.dotfiles/players.py
 /home/bk/.README -> /home/bk/.dotfiles/README
+/home/bk/.rofioptions -> /home/bk/.dotfiles/rofioptions
 /home/bk/.scripts/checkkarma -> /home/bk/.dotfiles/scripts/checkkarma
 /home/bk/.scripts/connect-bb-internet -> /home/bk/.dotfiles/scripts/connect-bb-internet
 /home/bk/.scripts/favicon.png -> /home/bk/.dotfiles/scripts/favicon.png
 /home/bk/.scripts/home.html -> /home/bk/.dotfiles/scripts/home.html
+/home/bk/.scripts/ipsave -> /home/bk/.dotfiles/scripts/ipsave
+/home/bk/.scripts/raspi.ip -> /home/bk/.dotfiles/scripts/raspi.ip
+/home/bk/.scripts/remme -> /home/bk/.dotfiles/scripts/remme
+/home/bk/.scripts/suspend -> /home/bk/.dotfiles/scripts/suspend
 /home/bk/.scripts/theme.css -> /home/bk/.dotfiles/scripts/theme.css
+/home/bk/.scripts/welcome.sh -> /home/bk/.dotfiles/scripts/welcome.sh
+/home/bk/.scripts/xkcd.sh -> /home/bk/.dotfiles/scripts/xkcd.sh
+/home/bk/.sift.conf -> /home/bk/.dotfiles/sift.conf
 /home/bk/.tmux.conf -> /home/bk/.dotfiles/tmux.conf
+/home/bk/.tmuxp/current.yaml -> /home/bk/.dotfiles/tmuxp/current.yaml
 /home/bk/.tmuxp/work-large.yaml -> /home/bk/.dotfiles/tmuxp/work-large.yaml
 /home/bk/.tmuxp/work-small-full.yaml -> /home/bk/.dotfiles/tmuxp/work-small-full.yaml
 /home/bk/.tmuxp/work-v2.yaml -> /home/bk/.dotfiles/tmuxp/work-v2.yaml
+/home/bk/.vim/damienConway.vim -> /home/bk/.dotfiles/vim/damienConway.vim
+/home/bk/.vim/filetypes.vim -> /home/bk/.dotfiles/vim/filetypes.vim
+/home/bk/.vim/leader.vim -> /home/bk/.dotfiles/vim/leader.vim
+/home/bk/.vim/vundles.vim -> /home/bk/.dotfiles/vim/vundles.vim
 /home/bk/.vimrc -> /home/bk/.dotfiles/vimrc
+/home/bk/.weechat/python/vimode.py -> /home/bk/.dotfiles/weechat/python/vimode.py
+/home/bk/.weechat/weechat.conf -> /home/bk/.dotfiles/weechat/weechat.conf
