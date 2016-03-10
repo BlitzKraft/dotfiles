@@ -107,6 +107,10 @@ alias lines="wc -l"
 alias remme="/home/bk/.scripts/remme"
 alias suspend="/home/bk/.scripts/suspend"
 
+# Prevent Oh $#!7 moments
+alias rm="rm -i"
+alias mv="mv -i"
+
 # Returns world population at the moment
 alias pop="curl -s http://www.census.gov/popclock/data/population/world | python -c 'import json,sys;obj=json.load(sys.stdin);print obj[\"world\"][\"population\"]'"
 
