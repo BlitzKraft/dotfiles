@@ -52,7 +52,8 @@ set showcmd
 map <F5> :setlocal spell! spelllang=en_us<CR>
 
 set background=dark
-colorscheme material-theme 
+" colorscheme material-theme 
+colorscheme sourcerer
 
 "Show tab line above
 set showtabline=2
@@ -61,6 +62,8 @@ syntax enable
 let g:choosewin_overlay_enable = 1
 "set choose win shortcut
 "nmap - <Plug>(choosewin)
+
+
 :set cursorline
 :hi CursorLine cterm=NONE ctermbg=235 ctermfg=none
 
