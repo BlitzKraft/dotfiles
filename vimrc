@@ -8,9 +8,6 @@ if filereadable(expand("/home/bk/.vim/vundles.vim"))
 endif
 
 filetype plugin indent on    " required
-" To ignore plugin indent changes, instead use:
-"filetype plugin on
-"
 " Brief help
 " :PluginList       - lists configured plugins
 " :PluginInstall    - installs plugins; append `!` to update or just :PluginUpdate
@@ -18,11 +15,7 @@ filetype plugin indent on    " required
 " :PluginClean      - confirms removal of unused plugins; append `!` to auto-approve removal
 "
 " see :h vundle for more details or wiki for FAQ
-" Put your non-Plugin stuff after this line
 
-" set rtp+=$HOME/.local/lib/python2.7/site-packages/powerline/bindings/vim/
-"set rtp+=$HOME/.local/lib/python2.7/site-packages/powerline/bindings/vim/
-" Always show statusline
 set laststatus=2
 
 " Use 256 colours (Use this setting only if your terminal supports 256 colours)
@@ -35,7 +28,6 @@ let g:powerline#extensions#tabline#enabled = 1
 let g:powerline#extensions#tabline#fnamemod = ':t'
 
 " toggle invisible characters
-"set invlist
 map <F6> :set invlist!<CR>
 set listchars=tab:▸\ ,eol:¬,trail:⋅,extends:❯,precedes:❮
 " make the highlighting of tabs less annoying
@@ -63,19 +55,11 @@ let g:choosewin_overlay_enable = 1
 "set choose win shortcut
 "nmap - <Plug>(choosewin)
 
-
 :set cursorline
 :hi CursorLine cterm=NONE ctermbg=235 ctermfg=none
-
 
 " Map tab and shift tab to switch buffers
 :nnoremap <Tab> :bnext<CR>
 :nnoremap <S-Tab> :bprevious<CR>
 let g:vim_markdown_folding_disabled = 1
 map <C-n> :NERDTreeToggle<CR>
-
-" Don't do things twice. 
-" :if !exists("autocommands_loaded")
-" :  let autocommands_loaded = 1
-" :  au ...
-" :endif
