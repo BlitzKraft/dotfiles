@@ -206,7 +206,6 @@ function _update_ps1() {
 export PROMPT_COMMAND="_update_ps1; $PROMPT_COMMAND"
 export TERM="xterm-256color"
 
-/home/bk/.scripts/welcome.sh
 
 ##########################
 # DBUS session Bus address
