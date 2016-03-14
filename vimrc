@@ -63,3 +63,7 @@ let g:choosewin_overlay_enable = 1
 :nnoremap <S-Tab> :bprevious<CR>
 let g:vim_markdown_folding_disabled = 1
 map <C-n> :NERDTreeToggle<CR>
+
+" Undo directory
+:set undofile
+:set undodir=~/.vim/undodir
