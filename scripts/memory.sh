@@ -6,26 +6,29 @@
 FULL=\=
 #FULL=▓
 #EMPTY=░
-EMPTY=-
-SIZE=80
-INTERVAL=1
+EMPTY=.
+#SIZE=80
+INTERVAL=30
 
 draw() {
 	perc=$1
+	SIZE=$(tput cols)
+	SIZE=$((SIZE * 90/100))
 	inc=$(( perc * SIZE / 100 ))
-	thiscolor=
 	nocolor="[0m"
-	case $inc in 
+	case $perc in 
 	[1-5]*)
-		color="[1;32m"
+		color="[32m"
 		;;
 	[6-8]*)
 		color="[36m"
 		;;
-	9[*]) color="[1;31m"
+	[9]*) 
+		color="[31m"
 		;;
 	esac
-	out="$perc% $color"
+	out="$perc% "
+	out="$out $color"
 	for v in `seq 0 $(( SIZE - 1 ))`
 	do
 		test "$v" -le "$inc"	 \
