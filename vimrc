@@ -64,6 +64,8 @@ let g:choosewin_overlay_enable = 1
 let g:vim_markdown_folding_disabled = 1
 map <C-n> :NERDTreeToggle<CR>
 
-" Undo directory
+"ix.io is like pastebin but better. 
+:noremap <silent> <leader>i :w !ix<CR> " Undo directory
+
 :set undofile
 :set undodir=~/.vim/undodir
