@@ -1,12 +1,9 @@
 #!/bin/bash
 
 #Application of this command: curl -s http://www.reddit.com/user/$username/about.json | tr "," "\n" | grep "karma" 
-#Array of usernames separated by spaces
-#TODO: Read usernames from a separate file instead
-users=(BlitzKraft aaronitesWife mythieesWife angrypotato0 The_Dr_B1B oedipusJack pw_is_donotchangepls)
 
 date
-for i in "${users[@]}"
+cat ~/.dotfiles/scripts/users | while read i
 do
 	#Output username, in red
 	echo -e "\e[31m\e[1m$i\e[0m"
