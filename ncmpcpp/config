@@ -65,8 +65,8 @@ mpd_host = "localhost"
 visualizer_fifo_path = "/home/bk/.mpd.fifo"
 visualizer_output_name = "fifo"
 visualizer_sync_interval = "15"
-visualizer_type = "spectrum"
-visualizer_look = "●|"   #▋"  ## (used to be this |▮ )
+#visualizer_type = "spectrum"
+#visualizer_look = "●|"   #▋"  ## (used to be this |▮ )
 visualizer_color = "cyan"
 
 #Clock settings
@@ -75,7 +75,7 @@ clock_display_seconds="no"
 
 #Lyrics
 fetch_lyrics_for_current_song_in_background = "yes"
-lyrics_database = "1"  
+#lyrics_database = "1"  
 store_lyrics_in_song_dir = "yes"
 follow_now_playing_lyrics = "yes"  
 
@@ -85,5 +85,6 @@ ask_before_clearing_playlists = "yes"
 #Status bar display 
 song_status_format="%f - %D"
 
-default_tag_editor_left_col="dirs"
+#default_tag_editor_left_col="dirs"
 visualizer_in_stereo="yes"
+locked_screen_width_part = 70
