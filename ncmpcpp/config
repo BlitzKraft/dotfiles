@@ -30,54 +30,51 @@
 ## - 9 - end of current color
 
 
- mpd_music_dir = "/home/bk/Music/"  
- mpd_host = "127.0.0.1"
- mpd_port = "6600"
- mpd_connection_timeout = "5"  
- mpd_crossfade_time = "5"  
- playlist_disable_highlight_delay = "0"  
- playlist_display_mode = "columns"  
- browser_display_mode = "columns"  
- incremental_seeking = "yes"  
- autocenter_mode = "yes"  
- header_visibility = "yes"  
- statusbar_visibility = "yes"  
- fancy_scrolling = "yes"  
- song_list_format = %f - %D 
- display_screens_numbers_on_start = "yes"  
- ignore_leading_the = "yes"  
- song_columns_list_format = "(25)[blue]{D} (60)[cyan]{f} (10)[blue]{l}"  
- colors_enabled = "yes"  
- main_window_color = "white"  
- header_window_color = "cyan"  
- volume_color = "white"  
- progressbar_color = "white"  
- statusbar_color = "blue"  
- color1 = "blue"  
- color2 = "cyan"  
- active_column_color = "cyan"  
- active_window_border = "blue"  
- user_interface = "classic"
-
+mpd_music_dir = "/home/bk/Music/"
+mpd_host = "127.0.0.1"
+mpd_port = "6600"
+mpd_connection_timeout = "5"
+mpd_crossfade_time = "5"
+playlist_disable_highlight_delay = "0"
+playlist_display_mode = "columns"
+browser_display_mode = "columns"
+incremental_seeking = "yes"
+autocenter_mode = "yes"
+header_visibility = "yes"
+statusbar_visibility = "yes"
+song_columns_list_format = "(40)[blue]{f} (25)[cyan]{D} (4f)[white]{l}
+ignore_leading_the = "yes"
+colors_enabled = "yes"
+main_window_color = "white"
+header_window_color = "cyan"
+volume_color = "white"
+progressbar_color = "white"
+progressbar_look = "->"
+progressbar_elapsed_color = "cyan"
+statusbar_color = "blue"
+color1 = "blue"
+color2 = "cyan"
+active_column_color = "cyan"
+active_window_border = "blue"
+user_interface = "classic"
 
 #For visualizer
-mpd_host = "localhost"
 visualizer_fifo_path = "/home/bk/.mpd.fifo"
 visualizer_output_name = "fifo"
 visualizer_sync_interval = "15"
 #visualizer_type = "spectrum"
-#visualizer_look = "●|"   #▋"  ## (used to be this |▮ )
+#▋"  ## (used to be this |▮ )
+visualizer_look = "●|"
 visualizer_color = "cyan"
 
 #Clock settings
 clock_display_seconds="no"
 
-
 #Lyrics
 fetch_lyrics_for_current_song_in_background = "yes"
-#lyrics_database = "1"  
+#lyrics_database = "1"
 store_lyrics_in_song_dir = "yes"
-follow_now_playing_lyrics = "yes"  
+follow_now_playing_lyrics = "yes"
 
 
 ask_before_clearing_playlists = "yes"
