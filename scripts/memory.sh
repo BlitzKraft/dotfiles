@@ -10,9 +10,9 @@ INTERVAL=10
 SIZE=$(tput cols)
 SIZE=$((SIZE - 4))
 #breakpoints in percent
-abreakpoint1=50
-abreakpoint2=80
-abreakpoint3=90
+breakpoint1=50
+breakpoint2=80
+breakpoint3=90
 color1="[32m"
 color2="[36m"
 color3="[33m"
@@ -23,21 +23,10 @@ nocolor="[0m"
 draw() {
 	perc=$1
 	inc=$(( perc * SIZE / 100 ))
-	breakpoint1=$(( abreakpoint1 * SIZE / 100))
-	breakpoint2=$(( abreakpoint2 * SIZE / 100))
-	breakpoint3=$(( abreakpoint3 * SIZE / 100))
-#	case $perc in 
-#	[1-5]*)
-#		color="[32m"
-#		;;
-#	[6-8]*)
-#		color="[36m"
-#		;;
-#	[9]*) 
-#		color="[31m"
-#		;;
-#	esac
-	out="$perc% "
+	breakpoint1=$(( breakpoint1 * SIZE / 100))
+	breakpoint2=$(( breakpoint2 * SIZE / 100))
+	breakpoint3=$(( breakpoint3 * SIZE / 100))
+	out="$perc%"
 	out="$out $color"
 	for v in `seq 0 $(( SIZE - 1 ))`
 	do
@@ -58,7 +47,6 @@ draw() {
 		test "$v" -le "$inc"	 \
 		&& out="${out}${color}${FULL}${nocolor}" \
 		|| out="${out}${bgcolor}${EMPTY}${nocolor}"
-		#|| out="${out}${color4}${EMPTY}${nocolor}"
 	done
 	out="${out}${nocolor}"
 	echo $out
