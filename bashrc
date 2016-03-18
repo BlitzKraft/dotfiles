@@ -3,17 +3,17 @@
 ##########
 
 # Navigation
-alias doc="cd ~/Documents"
-alias down="cd ~/Downloads"
-alias ..="cd .."
-alias dot="cd ~/.dotfiles/"
-alias mk="mkdir"
 alias cdht="cd ~/Documents/Persona-BitBucket/httpd"
 alias cdv="cd ~/Documents/vendingmachine"
+alias doc="cd ~/Documents"
+alias down="cd ~/Downloads"
+alias dot="cd ~/.dotfiles/"
+alias mk="mkdir"
+alias ..="cd .."
 
 # Find a running process
-alias psg="ps aux | grep -v grep | grep -i -e VSZ -e"
 alias ps="ps auxf"
+alias psg="ps aux | grep -v grep | grep -i -e VSZ -e"
 
 # Powerline
 alias power="cd ~/.local/lib/python2.7/site-packages/powerline"
@@ -23,15 +23,17 @@ alias repower="powerline-daemon -k;sleep 2; powerline-daemon -q"
 alias histg="history | grep"
 
 # Duh
-alias myip="curl https://api.ipify.org/; echo"
-alias pingtest="ping -c 5 google.com"
-alias localip="ifconfig | grep -A3 wlan0 | grep \"inet \" | sed -e 's/^[[:space:]]*//' | cut -d \" \" -f2 | cut -d : -f2"
-alias localipv6="ifconfig | grep -A3 wlan0 | grep inet6 | sed -e 's/^[[:space:]]*//' | cut -d \" \" -f3"
+alias bashrf="source ~/.bashrc"
+alias batt="cat /sys/class/power_supply/BAT0/capacity"
+alias btcprice="echo $(curl -s https://btc-e.com/api/2/btc_usd/ticker | json_pp | grep last | cut -d : -f 2 | tr -d ,| tr -d " ")"
 alias c="clear"
+alias checkkarma="bash ~/.scripts/checkkarma"
 alias grepc="grep --color=always" 
 alias listwifi="sudo iwlist wlan0 scan | sift -e ESSID -e Address -e Quality -e Encryption | head -32"
-alias btcprice="echo $(curl -s https://btc-e.com/api/2/btc_usd/ticker | json_pp | grep last | cut -d : -f 2 | tr -d ,| tr -d " ")"
-alias batt="cat /sys/class/power_supply/BAT0/capacity"
+alias localip="ifconfig | grep -A3 wlan0 | grep \"inet \" | sed -e 's/^[[:space:]]*//' | cut -d \" \" -f2 | cut -d : -f2"
+alias localipv6="ifconfig | grep -A3 wlan0 | grep inet6 | sed -e 's/^[[:space:]]*//' | cut -d \" \" -f3"
+alias myip="curl https://api.ipify.org/; echo"
+alias pingtest="ping -c 5 google.com"
 
 # Spread sheet calculator
 alias sc="sc-im"
@@ -39,19 +41,13 @@ alias sc="sc-im"
 # mutt open gmail bh directly
 alias muttg="mutt -F ~/.mutt/muttgrc"
 
-# Refresh bash sources
-alias bashrf="source ~/.bashrc"
-
 # ls variations
 alias la="ls -a"
-alias lsg="ls | grep -i $1"
 alias llg="ll | grep -i $1"
 alias lag="ls -a | grep -i $1"
+alias lsg="ls | grep -i $1"
 alias lsc="ls --color=always"
 alias lsag="ls -a | grep "
-
-# Reddit karma
-alias checkkarma="bash ~/.scripts/checkkarma"
 
 # ncmpcpp
 alias nvis="ncmpcpp -s visualizer"
@@ -66,6 +62,7 @@ alias nomouse="xdotool mousemove 0 100"
 
 # Log current ip address (both external and local, ipv4 only)
 alias ipsave="/home/bk/.scripts/ipsave"
+
 # Show last 10 used ipaddresses
 alias tailip="tail ~/.ip.log"
 
@@ -116,7 +113,7 @@ alias mv="mv -i"
 alias pop="curl -s http://www.census.gov/popclock/data/population/world | python -c 'import json,sys;obj=json.load(sys.stdin);print obj[\"world\"][\"population\"]'"
 
 # List all alis
-# Most of it is make it look pretty. Show heading columns, numbers and colors
+# Most of it is to make it look pretty. Show heading columns, numbers and colors
 alias listall="echo -e '\e[31m\e[1mNo.\tAlias\t\tCommand\e[0m';grep alias ~/.bashrc |cut -d' ' -f2- | sed 's/\=/\t\t/g' | nl -w 2"
 
 # Edit this file
@@ -128,23 +125,24 @@ alias gstat="git status"
 
 # Useful apt get shortcuts
 alias aptget="sudo apt-get"
-alias update='sudo apt-get update;  sudo apt-get upgrade'
-alias install="sudo apt-get install $1"
-alias remove="sudo apt-get remove $1"
 alias autoremove="sudo apt-get autoremove"
 alias autoclean="sudo apt-get autoclean"
+alias install="sudo apt-get install $1"
+alias remove="sudo apt-get remove $1"
+alias update='sudo apt-get update;  sudo apt-get upgrade'
 
 # List functions
 alias listfun="cat ~/.bashrc | grep function | cut -c 9-  "
 
 # some utilities
-alias bb2internet="~/.scripts/connect-bb-internet"
+# alias bb2internet="~/.scripts/connect-bb-internet"
 alias cc="xclip -selection clipboard /dev/null" #Clear clipboard
 
 # lsrc is from rcm, a dotfile managing utility
 alias lsrc="lsrc | sed 's/:/ -> /g'"
-alias setnwid="tmux resize-pane -x 44; ncmpcpp -s visualizer"
-alias setnhgt="tmux resize-pane -y 15; ncmpcpp -s clock"
+
+#alias setnwid="tmux resize-pane -x 44; ncmpcpp -s visualizer"
+#alias setnhgt="tmux resize-pane -y 15; ncmpcpp -s clock"
 
 # Endal
 
