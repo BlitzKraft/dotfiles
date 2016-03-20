@@ -1,7 +1,7 @@
 "" Some interesting stuff from Damien Conway
 """"""""""""""""""""""""""""""""""""""""""""
 "" Search improvements
-set incsearch ignorecase smartcase hlsearch
+set incsearch ignorecase smartcase 
 "" hlsearch highlights all results
 "" Cleaning up after it
 nmap <silent> <BS> :nohlsearch <CR>
