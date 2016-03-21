@@ -62,10 +62,12 @@ user_interface = "classic"
 visualizer_fifo_path = "/home/bk/.mpd.fifo"
 visualizer_output_name = "fifo"
 visualizer_sync_interval = "15"
+#visualizer_color = blue, cyan, 12, white
+visualizer_color = 21, 33, 45
 #visualizer_type = "spectrum"
 #▋"  ## (used to be this |▮ )
 visualizer_look = "●|"
-visualizer_color = "cyan"
+#visualizer_color = "cyan"
 
 #Clock settings
 clock_display_seconds="no"
