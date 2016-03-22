@@ -69,3 +69,6 @@ map <C-n> :NERDTreeToggle<CR>
 
 :set undofile
 :set undodir=~/.vim/undodir
+
+" For responding to emails in mutt
+:nnoremap <C-S-b> :%s/BlitzKomp/squarefruitlabs.com/g<CR>
