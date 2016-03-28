@@ -7,7 +7,6 @@ call vundle#begin()
 "============Always load
 Plugin 'VundleVim/Vundle.vim'
 Plugin 'scrooloose/nerdtree.git'
-Plugin 'jdkanani/vim-material-theme'
 Plugin 'xero/sourcerer'
 " Plugin 'Valloric/YouCompleteMe'
 Plugin 'powerline/powerline', {'rtp': 'powerline/bindings/vim/'}
@@ -15,7 +14,7 @@ Plugin 'powerline/powerline', {'rtp': 'powerline/bindings/vim/'}
 "============Conditionals
 Plugin 'plasticboy/vim-markdown'
 Plugin 'JulesWang/css.vim'
-Plugin 'genoma/vim-less'
+" Plugin 'genoma/vim-less'
 Plugin 'mattn/emmet-vim'
 Plugin 'sudar/vim-arduino-syntax'
 
