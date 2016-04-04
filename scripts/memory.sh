@@ -5,7 +5,7 @@
 #Born in this thread: https://www.reddit.com/r/unixporn/comments/4afp51/equivalent_of_ttyload_for_memory/
 FULL=\=
 EMPTY=.
-INTERVAL=10
+INTERVAL=1
 
 SIZE=$(tput cols)
 SIZE=$((SIZE - 4))
@@ -30,16 +30,16 @@ draw() {
 	out="$out $color"
 	for v in `seq 0 $(( SIZE - 1 ))`
 	do
-		if (( v <= breakpoint1 ))
+		if [ $v -le $breakpoint1 ]
 		then
 			color=$color1
-		elif (( v > breakpoint1 && v <= breakpoint2 ))
+		elif [ $v -gt $breakpoint1 ] && [ $v -le $breakpoint2 ]
 		then
 			color=$color2
-		elif (( v > breakpoint2 && v <= breakpoint3 ))
+		elif [ $v -gt $breakpoint2 ] && [ $v -le $breakpoint3 ]
 		then
 			color=$color3
-		elif (( v > breakpoint3 ))
+		elif [ $v -gt $breakpoint3 ]
 		then 
 			color=$color4
 		fi
