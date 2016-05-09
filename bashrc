@@ -129,7 +129,7 @@ alias autoremove="sudo apt-get autoremove"
 alias autoclean="sudo apt-get autoclean"
 alias install="sudo apt-get install $1"
 alias remove="sudo apt-get remove $1"
-alias update='sudo apt-get update;  sudo apt-get upgrade'
+alias update="sudo apt-get update && sudo apt-get upgrade"
 
 # List functions
 alias listfun="cat ~/.bashrc | grep function | cut -c 9-  "
@@ -141,8 +141,8 @@ alias cc="xclip -selection clipboard /dev/null" #Clear clipboard
 # lsrc is from rcm, a dotfile managing utility
 alias lsrc="lsrc | sed 's/:/ -> /g'"
 
-#alias setnwid="tmux resize-pane -x 44; ncmpcpp -s visualizer"
-#alias setnhgt="tmux resize-pane -y 15; ncmpcpp -s clock"
+#weather
+alias weather=". /home/bk/.scripts/ansiweather/ansiweather -F"
 
 # Endal
 
@@ -205,6 +205,18 @@ function _update_ps1() {
 export PROMPT_COMMAND="_update_ps1; $PROMPT_COMMAND"
 export TERM="xterm-256color"
 
+function mygit() {
+	list="$(ls -1)";
+	#echo "$list"
+	for i in $list; do
+		str=""
+		if [ -d $i/.git ] ;
+		then
+			echo "$i ($(git --git-dir="$i"/.git symbolic-ref --short HEAD))";
+		else echo -n ;
+		fi
+	done
+}
 
 ##########################
 # DBUS session Bus address
@@ -213,7 +225,7 @@ export TERM="xterm-256color"
 touch $HOME/.dbus/Xdbus
 chmod 600 $HOME/.dbus/Xdbus
 env | grep DBUS_SESSION_BUS_ADDRESS > $HOME/.dbus/Xdbus
-echo 'export DBUS_SESSION_BUS_ADDRESS' >> $HOME/.dbus/Xdbus
+echo "export DBUS_SESSION_BUS_ADDRESS" >> $HOME/.dbus/Xdbus
 
 /home/bk/.scripts/ipsave
 export RTV_EDITOR=vim
