@@ -5,7 +5,7 @@
 #Born in this thread: https://www.reddit.com/r/unixporn/comments/4afp51/equivalent_of_ttyload_for_memory/
 FULL=\=
 EMPTY=.
-INTERVAL=1
+INTERVAL=4
 
 SIZE=$(tput cols)
 SIZE=$((SIZE - 4))
