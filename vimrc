@@ -8,23 +8,13 @@ if filereadable(expand("/home/bk/.vim/vundles.vim"))
 endif
 
 filetype plugin indent on    " required
-" Brief help
-" :PluginList       - lists configured plugins
-" :PluginInstall    - installs plugins; append `!` to update or just :PluginUpdate
-" :PluginSearch foo - searches for foo; append `!` to refresh local cache
-" :PluginClean      - confirms removal of unused plugins; append `!` to auto-approve removal
-"
-" see :h vundle for more details or wiki for FAQ
 
 set laststatus=2
 
-" Use 256 colours (Use this setting only if your terminal supports 256 colours)
 set t_Co=256
 
-" Enable the list of buffers
 let g:powerline#extensions#tabline#enabled = 1
 
-" Show just the filename
 let g:powerline#extensions#tabline#fnamemod = ':t'
 
 " toggle invisible characters
@@ -32,19 +22,22 @@ map <F6> :set invlist!<CR>
 set listchars=tab:▸\ ,eol:¬,trail:⋅,extends:❯,precedes:❮
 " make the highlighting of tabs less annoying
 highlight SpecialKey ctermbg=none 
-set showbreak=↪
+" set showbreak=↪
+let &showbreak="\u21aa "
 
-"Use 'jk' as escape instead of escape.
 inoremap jk <esc>
 inoremap <esc> <nop>
 set relativenumber
 set timeoutlen=1000
 set showcmd
 
+vnoremap y myy`y
+vnoremap Y myY`y
+
+
 map <F5> :setlocal spell! spelllang=en_us<CR>
 
 set background=dark
-" colorscheme material-theme 
 colorscheme sourcerer
 
 "Show tab line above
@@ -52,8 +45,6 @@ set showtabline=2
 hi Normal ctermbg=None
 syntax enable
 let g:choosewin_overlay_enable = 1
-"set choose win shortcut
-"nmap - <Plug>(choosewin)
 
 :set cursorline
 :hi CursorLine cterm=NONE ctermbg=235 ctermfg=none
