@@ -17,6 +17,7 @@ Plugin 'JulesWang/css.vim'
 " Plugin 'genoma/vim-less'
 Plugin 'mattn/emmet-vim'
 Plugin 'sudar/vim-arduino-syntax'
+Plugin 'blitzkraft/BinarySearchMove'
 
 " Hardly used.
 " Plugin 'tpope/vim-rails'
