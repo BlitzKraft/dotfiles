@@ -23,7 +23,7 @@ set listchars=tab:▸\ ,eol:¬,trail:⋅,extends:❯,precedes:❮
 " make the highlighting of tabs less annoying
 highlight SpecialKey ctermbg=none 
 " set showbreak=↪
-let &showbreak="\u21aa "
+let showbreak="\u21aa "
 
 inoremap jk <esc>
 inoremap <esc> <nop>
@@ -60,6 +60,7 @@ map <C-n> :NERDTreeToggle<CR>
 
 :set undofile
 :set undodir=~/.vim/undodir
+:nnoremap <F10> :set paste!<CR>
 
 " For responding to emails in mutt
 :nnoremap <C-S-b> :%s/BlitzKomp/squarefruitlabs.com/g<CR>
