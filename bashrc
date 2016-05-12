@@ -48,6 +48,7 @@ alias lag="ls -a | grep -i $1"
 alias lsg="ls | grep -i $1"
 alias lsc="ls --color=always"
 alias lsag="ls -a | grep "
+alias mygit="mygit | column -t"
 
 # ncmpcpp
 alias nvis="ncmpcpp -s visualizer"
