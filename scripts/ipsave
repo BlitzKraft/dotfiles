@@ -1,4 +1,5 @@
 exip=$(curl -s http://ipecho.net/plain; echo);
 inip=$(ifconfig | grep -A3 wlan0 | grep "inet " | sed -e 's/^[[:space:]]*//' | cut -d " " -f2 | cut -d : -f2);
 inv6=$(ifconfig | grep -A3 wlan0 | grep inet6 | sed -e 's/^[[:space:]]*//' | cut -d " " -f3);
-echo -e $(date) '\t' $exip '\t' $inip '\t' $inv6 >> ~/.ip.log;
+wifi=$(iwgetid -r | tr " " _)
+echo -e $(date) '\t' $exip '\t' $inip '\t' $inv6  '\t' $wifi >> ~/.ip.log;
