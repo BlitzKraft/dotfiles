@@ -38,7 +38,7 @@ vnoremap Y myY`y
 map <F5> :setlocal spell! spelllang=en_us<CR>
 
 set background=dark
-colorscheme sourcerer
+colorscheme onedark
 
 "Show tab line above
 set showtabline=2
@@ -53,7 +53,6 @@ let g:choosewin_overlay_enable = 1
 :nnoremap <Tab> :bnext<CR>
 :nnoremap <S-Tab> :bprevious<CR>
 let g:vim_markdown_folding_disabled = 1
-map <C-n> :NERDTreeToggle<CR>
 
 "ix.io is like pastebin but better. 
 :noremap <silent> <leader>i :w !ix<CR> " Undo directory
@@ -64,3 +63,9 @@ map <C-n> :NERDTreeToggle<CR>
 
 " For responding to emails in mutt
 :nnoremap <C-S-b> :%s/BlitzKomp/squarefruitlabs.com/g<CR>
+
+"netrw settings
+let g:netrw_banner=0
+let g:netrw_altv=1
+
+map <C-n> :Explore<CR>

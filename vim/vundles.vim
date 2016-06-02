@@ -6,8 +6,8 @@ call vundle#begin()
 
 "============Always load
 Plugin 'VundleVim/Vundle.vim'
-Plugin 'scrooloose/nerdtree.git'
 Plugin 'xero/sourcerer'
+Plugin 'blitzkraft/onedark.vim'
 " Plugin 'Valloric/YouCompleteMe'
 Plugin 'powerline/powerline', {'rtp': 'powerline/bindings/vim/'}
 
