@@ -13,6 +13,8 @@ set $mod Mod1
 new_window pixel 2
 new_float pixel 2
 
+for_window [window_role="test_thumbnail"] floating enable
+
 # Font for window titles. Will also be used by the bar unless a different font
 # is used in the bar {} block below. ISO 10646 = Unicode
 #font -misc-fixed-medium-r-normal--13-120-75-75-C-70-iso10646-1
@@ -45,7 +47,7 @@ bindsym $mod+u border none
 # There also is the (new) i3-dmenu-desktop which only displays applications
 # shipping a .desktop file. It is a wrapper around dmenu, so you need that
 # installed.
-bindsym $mod+d exec --no-startup-id i3-dmenu-desktop --dmenu='rofi -dmenu -p "run:"'
+bindsym $mod+d exec --no-startup-id i3-dmenu-desktop --dmenu='rofi -dmenu -p "run:" -fake-transparency'
 
 # change focus
 bindsym $mod+h focus left

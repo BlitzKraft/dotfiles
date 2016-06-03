@@ -1,0 +1,30 @@
+!# xrdb -merge Xresources # command for updating xresources
+UXTerm*faceName: Sauce Code Powerline
+UXTerm*faceSize: 10
+UXTerm.fontMenu.fontdefault.Label: Normal
+UXTerm.fontMenu.font1.Label: Illegible
+UXTerm.fontMenu.font2.Label: Smallest
+UXTerm.fontMenu.font3.Label: Small
+UXTerm.fontMenu.font4.Label: Large
+UXTerm.fontMenu.font5.Label: Huge
+UXTerm.fontMenu.font6.Label: Bold
+UXTerm.vt100.utf8Fonts.font: -efont-fixed-medium-r-normal--14-*-*-*-c-*-iso10646-1
+UXTerm.vt100.utf8Fonts.font1: nil2
+UXTerm.vt100.utf8Fonts.font2: -efont-fixed-medium-r-normal--10-*-*-*-c-*-iso10646-1
+UXTerm.vt100.utf8Fonts.font3: -efont-fixed-medium-r-normal--12-*-*-*-c-*-iso10646-1
+UXTerm.vt100.utf8Fonts.font4: -efont-fixed-medium-r-normal--16-*-*-*-c-*-iso10646-1
+UXTerm.vt100.utf8Fonts.font5: -efont-fixed-medium-r-normal--24-*-*-*-c-*-iso10646-1
+UXTerm.vt100.utf8Fonts.font6: -efont-fixed-bold-r-normal--16-*-*-*-c-*-iso10646-1
+UXTerm.vt100.utf8Fonts.boldFont: -efont-fixed-bold-r-normal--14-*-*-*-c-*-iso10646-1
+xterm*locale: true
+xterm*utf8: 1
+
+
+rxvt.font: xft:Source Code Pro:size=10
+
+rofi.color-enabled: true
+rofi.color-window: #393939, #393939, #268bd2
+rofi.color-normal: #393939, #ffffff, #393939, #268bd2, #ffffff
+rofi.color-active: #393939, #268bd2, #393939, #268bd2, #205171
+rofi.color-urgent: #393939, #f3843d, #393939, #268bd2, #ffc39c
+rofi.opacity: 70

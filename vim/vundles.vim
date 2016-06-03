@@ -8,6 +8,7 @@ call vundle#begin()
 Plugin 'VundleVim/Vundle.vim'
 Plugin 'xero/sourcerer'
 Plugin 'blitzkraft/onedark.vim'
+Plugin 'blitzkraft/vim-polyglot'
 " Plugin 'Valloric/YouCompleteMe'
 Plugin 'powerline/powerline', {'rtp': 'powerline/bindings/vim/'}
 

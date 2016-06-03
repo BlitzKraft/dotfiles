@@ -2,12 +2,14 @@
 # Aliases#
 ##########
 
+
 # Navigation
 alias cdht="cd ~/Documents/Persona-BitBucket/httpd"
 alias cdv="cd ~/Documents/vendingmachine"
 alias doc="cd ~/Documents"
 alias down="cd ~/Downloads"
 alias dot="cd ~/.dotfiles/"
+alias exer="cd ~/exercism"
 alias mk="mkdir"
 alias ..="cd .."
 
@@ -25,7 +27,7 @@ alias histg="history | grep"
 # Duh
 alias bashrf="source ~/.bashrc"
 alias batt="cat /sys/class/power_supply/BAT0/capacity"
-alias btcprice="echo $(curl -s https://btc-e.com/api/2/btc_usd/ticker | json_pp | grep last | cut -d : -f 2 | tr -d ,| tr -d " ")"
+alias btcprice="echo $(curl -s https://btc-e.com/api/2/btc_usd/ticker | json_pp | grep last | cut -d : -f 2 | tr -d ,| tr -d ' ')"
 alias c="clear"
 alias checkkarma="bash ~/.scripts/checkkarma"
 alias grepc="grep --color=always" 
@@ -145,7 +147,10 @@ alias lsrc="lsrc | sed 's/:/ -> /g'"
 #weather
 alias weather=". /home/bk/.scripts/ansiweather/ansiweather -F"
 
+alias processing="~/Downloads/processing*/processing-java"
+
 # Endal
+
 
 ###########
 # Functions#

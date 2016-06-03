@@ -4,9 +4,12 @@
 #
 #Raspi's eth0 MAC
 #B8:27:EB:98:80:84
+#
+#Litterlift raspi mac
 
 echo "Beginning scan..."
-mac="00:C1:41:29:25:2D"
+#mac="00:C1:41:29:25:2D"
+mac="B8:27:EB:50:9C:20"
 
 RASPI=$(sudo nmap -T5 -p22 192.168.0.2-254 | grep -B4 $mac | grep "scan report for" | tr " " "\n" | grep 192)
 

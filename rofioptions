@@ -1,7 +1,7 @@
 ! Enabled modi
 rofi.modi:                           window,run,ssh
 ! Window opacity
-rofi.opacity:                        50
+rofi.opacity:                        70
 ! Window width
 rofi.width:                          50
 ! Number of lines
@@ -39,15 +39,19 @@ rofi.hlbg:                           #586E75
 ! Border color
 rofi.bc:                             #002B36
 ! Use extended color scheme
-rofi.color-enabled:                  false
+rofi.color-enabled:                  true
 ! Color scheme for normal row
-rofi.color-normal:                   #fdf6e3,#002b36,#eee8d5,#586e75,#eee8d5
+! rofi.color-normal:                   #fdf6e3,#002b36,#eee8d5,#586e75,#eee8d5
+rofi.color-normal: #393939, #ffffff, #393939, #268bd2, #ffffff
 ! Color scheme for urgent row
-rofi.color-urgent:                   #fdf6e3,#dc322f,#eee8d5,#dc322f,#fdf6e3
+! rofi.color-urgent:                   #fdf6e3,#dc322f,#eee8d5,#dc322f,#fdf6e3
+rofi.color-urgent: #393939, #f3843d, #393939, #268bd2, #ffc39c
 ! Color scheme for active row
-rofi.color-active:                   #fdf6e3,#268bd2,#eee8d5,#268bd2,#fdf6e3
+! rofi.color-active:                   #fdf6e3,#268bd2,#eee8d5,#268bd2,#fdf6e3
+rofi.color-active: #393939, #268bd2, #393939, #268bd2, #205171
 ! Color scheme window
-rofi.color-window:                   #fdf6e3,#002b36
+! rofi.color-window:                   #fdf6e3,#002b36
+rofi.color-window: #393939, #393939, #268bd2
 ! Border width
 rofi.bw:                             1
 ! Location on screen
