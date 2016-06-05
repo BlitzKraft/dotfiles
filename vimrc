@@ -19,6 +19,7 @@ let g:powerline#extensions#tabline#fnamemod = ':t'
 
 " toggle invisible characters
 map <F6> :set invlist!<CR>
+set invlist
 set listchars=tab:▸\ ,eol:¬,trail:⋅,extends:❯,precedes:❮
 " make the highlighting of tabs less annoying
 highlight SpecialKey ctermbg=none 
@@ -68,4 +69,4 @@ let g:vim_markdown_folding_disabled = 1
 let g:netrw_banner=0
 let g:netrw_altv=1
 
-map <C-n> :Explore<CR>
+map <C-n> :Vexplore<CR>
