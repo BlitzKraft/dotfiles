@@ -63,10 +63,13 @@ let g:vim_markdown_folding_disabled = 1
 :nnoremap <F10> :set paste!<CR>
 
 " For responding to emails in mutt
-:nnoremap <C-S-b> :%s/BlitzKomp/squarefruitlabs.com/g<CR>
+" :nnoremap <C-S-b> :%s/BlitzKomp/squarefruitlabs.com/g<CR>
 
 "netrw settings
 let g:netrw_banner=0
 let g:netrw_altv=1
 
 map <C-n> :Vexplore<CR>
+" Allow `h` and `l` to move you to previous/next line when reached
+set whichwrap+=>,l
+set whichwrap+=<,h
