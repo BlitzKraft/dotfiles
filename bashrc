@@ -34,7 +34,8 @@ alias grepc="grep --color=always"
 alias listwifi="sudo iwlist wlan0 scan | sift -e ESSID -e Address -e Quality -e Encryption | head -32"
 alias localip="ifconfig | grep -A3 wlan0 | grep \"inet \" | sed -e 's/^[[:space:]]*//' | cut -d \" \" -f2 | cut -d : -f2"
 alias localipv6="ifconfig | grep -A3 wlan0 | grep inet6 | sed -e 's/^[[:space:]]*//' | cut -d \" \" -f3"
-alias myip="curl https://api.ipify.org/; echo"
+alias myip="curl https://v4.ifconfig.co; echo"
+alias myipv6="curl https://v6.ifconfig.co; echo"
 alias pingtest="ping -c 5 google.com"
 
 # Spread sheet calculator
@@ -214,14 +215,19 @@ export TERM="xterm-256color"
 function mygit() {
 	list="$(ls -1)";
 	#echo "$list"
+	echo "" > /tmp/tmpgitlist
 	for i in $list; do
 		str=""
 		if [ -d $i/.git ] ;
 		then
-			echo "$i ($(git --git-dir="$i"/.git symbolic-ref --short HEAD))";
+			branch=$(git --git-dir="$i"/.git symbolic-ref --short HEAD);
+			url=$(cat "$i"/.git/config | grep url | cut -d "=" -f 2);
+			echo "$i ($branch) $url" >> /tmp/tmpgitlist;
 		else echo -n ;
 		fi
 	done
+	cat /tmp/tmpgitlist | grep -v ^git | grep -v ^http://// | column -t;
+	rm -f /tmp/tmpgitlist
 }
 
 ##########################
