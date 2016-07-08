@@ -87,4 +87,4 @@ song_status_format="%f - %D"
 
 #default_tag_editor_left_col="dirs"
 visualizer_in_stereo="yes"
-locked_screen_width_part = 70
+locked_screen_width_part = 50
