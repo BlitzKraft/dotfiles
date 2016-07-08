@@ -34,8 +34,8 @@ alias grepc="grep --color=always"
 alias listwifi="sudo iwlist wlan0 scan | sift -e ESSID -e Address -e Quality -e Encryption | head -32"
 alias localip="ifconfig | grep -A3 wlan0 | grep \"inet \" | sed -e 's/^[[:space:]]*//' | cut -d \" \" -f2 | cut -d : -f2"
 alias localipv6="ifconfig | grep -A3 wlan0 | grep inet6 | sed -e 's/^[[:space:]]*//' | cut -d \" \" -f3"
-alias myip="curl https://v4.ifconfig.co; echo"
-alias myipv6="curl https://v6.ifconfig.co; echo"
+alias myip="curl https://v4.ifconfig.co"
+alias myipv6="curl https://v6.ifconfig.co"
 alias pingtest="ping -c 5 google.com"
 
 # Spread sheet calculator
