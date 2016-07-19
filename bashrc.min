@@ -1,0 +1,97 @@
+##########
+# Aliases#
+##########
+
+# Navigation
+alias mk="mkdir"
+alias ..="cd .."
+
+# Find a running process
+alias ps="ps auxf"
+alias psg="ps aux | grep -v grep | grep -i -e VSZ -e"
+
+# Search command history
+alias histg="history | grep"
+
+# Duh
+alias bashrf="source ~/.bashrc"
+alias c="clear"
+alias grepc="grep --color=always" 
+alias myip="curl https://v4.ifconfig.co"
+alias myipv6="curl https://v6.ifconfig.co"
+alias pingtest="ping -c 5 google.com"
+
+# ls variations
+alias la="ls -a"
+alias llg="ll | grep -i $1"
+alias lag="ls -a | grep -i $1"
+alias lsg="ls | grep -i $1"
+alias lsc="ls --color=always"
+alias lsag="ls -a | grep "
+
+# Enable float values. Keeps me sane
+alias bc="bc -l"
+
+# easier invocation
+alias lines="wc -l" 
+
+# Prevent Oh $#!7 moments
+alias rm="rm -i"
+alias mv="mv -i"
+
+# List all alis
+# Most of it is to make it look pretty. Show heading columns, numbers and colors
+alias listall="echo -e '\e[31m\e[1mNo.\tAlias\t\tCommand\e[0m';grep alias ~/.bashrc |cut -d' ' -f2- | sed 's/\=/\t\t/g' | nl -w 2"
+
+# Edit this file
+alias edalias="vim ~/.bashrc"
+
+# Edit git configs and shortcuts
+alias edgit="vim ~/.gitconfig"
+alias gstat="git status"
+
+# List functions
+alias listfun="cat ~/.bashrc | grep function | cut -c 9-  "
+
+# Endal
+
+###########
+# Functions#
+###########
+function mcd () {	#make and cd
+    mkdir -p $1
+    cd $1
+}
+
+function extract {	#universal extract
+ if [ -z "$1" ]; then
+    # display usage if no parameters given
+    echo "Usage: extract <path/file_name>.<zip|rar|bz2|gz|tar|tbz2|tgz|Z|7z|xz|ex|tar.bz2|tar.gz|tar.xz>"
+ else
+    if [ -f $1 ] ; then
+        case $1 in
+          *.tar.bz2)   tar xvjf $1    ;;
+          *.tar.gz)    tar xvzf $1    ;;
+          *.tar.xz)    tar xvJf $1    ;;
+          *.lzma)      unlzma $1      ;;
+          *.bz2)       bunzip2 $1     ;;
+          *.rar)       unrar x -ad $1 ;;
+          *.gz)        gunzip $1      ;;
+          *.tar)       tar xvf $1     ;;
+          *.tbz2)      tar xvjf $1    ;;
+          *.tgz)       tar xvzf $1    ;;
+          *.zip)       unzip $1       ;;
+          *.Z)         uncompress $1  ;;
+          *.7z)        7z x $1        ;;
+          *.xz)        unxz ../$1        ;;
+          *.exe)       cabextract ../$1  ;;
+          *)           echo "extract: '$1' - unknown archive method" ;;
+        esac
+    else
+        echo "$1 - file does not exist"
+    fi
+fi
+}
+
+export PROMPT_COMMAND="_update_ps1; $PROMPT_COMMAND"
+export TERM="xterm-256color"
