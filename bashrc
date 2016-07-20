@@ -250,3 +250,5 @@ export PATH="$PATH:/usr/local/rvm/bin" # Add RVM to PATH for scripting
 
 # Relates to vimrc mods from Damian conway
 export MYVIMRC="/home/bk/.vimrc"
+
+[ -f ~/.fzf.bash ] && source ~/.fzf.bash
