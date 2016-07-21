@@ -1,0 +1,53 @@
+{
+	"segments": {
+		"left": [
+			{
+			"function": "powerline.segments.common.net.external_ip",
+			"priority": "None",
+			"args": {
+				"query_url":"http://icanhazip.com/",
+				"interval": 300
+				},
+				"priority": "none"
+			},
+			{
+				"function": "powerline.segments.common.mail.email_imap_alert",
+				"args": {
+					"username": "",
+					"password": ""
+					},
+				"priority": "none"
+			}
+			],
+		"right": [
+			{
+				"function": "powerline.segments.common.mail.email_imap_alert",
+				"args": {
+					"username": "",
+					"password": ""
+					}
+			},
+			{
+				"function": "powerline.segments.common.players.mpd",
+				"priority": 80
+			},
+			{
+				"function": "powerline.segments.common.time.date",
+				"name": "time",
+				"args": {
+					"format": "%H:%M",
+					"istime": true
+					}
+			},
+			{
+				"function":"powerline.segments.common.bat.battery",
+				"args": {
+					"gamify": true
+					}
+			},
+			{
+				"function": "powerline.segments.common.net.hostname"
+			}
+		]
+	}
+}
