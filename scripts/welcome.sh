@@ -20,7 +20,7 @@ echo -ne "\e[0m"
 echo -en "Local IP	: \e[31m\e[1m"
 ifconfig | grep -A3 wlan0 | grep "inet " | sed -e 's/^[[:space:]]*//' | cut -d " " -f2 | cut -d : -f2
 echo -ne "\e[0m"
-echo -e "The current world population is \e[34m\e[1m$(curl -s http://www.census.gov/popclock/data/population/world | tr , "\n" | grep World -A 5 | grep \"population\" | tr : "\n" | tail -1)\e[0m\e[0m"
+#echo -e "The current world population is \e[34m\e[1m$(curl -s http://www.census.gov/popclock/data/population/world | tr , "\n" | grep World -A 5 | grep \"population\" | tr : "\n" | tail -1)\e[0m\e[0m"
 echo "You have $pending tasks to do."
 
 
