@@ -38,6 +38,7 @@ alias lines="wc -l"
 # Prevent Oh $#!7 moments
 alias rm="rm -i"
 alias mv="mv -i"
+alias cp="cp -i"
 
 # List all alis
 # Most of it is to make it look pretty. Show heading columns, numbers and colors
