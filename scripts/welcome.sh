@@ -1,5 +1,5 @@
 #Variables go here
-myzip="63108"
+myzip="94114"
 wifi=$(iwgetid -r)
 pending=$(task status:pending count)
 btcprice=$(curl -s https://btc-e.com/api/2/btc_usd/ticker | json_pp | grep last | cut -d : -f 2 | tr -d ,| tr -d " ")
