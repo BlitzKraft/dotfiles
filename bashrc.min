@@ -22,7 +22,9 @@ alias myipv6="curl https://v6.ifconfig.co"
 alias pingtest="ping -c 5 google.com"
 
 # ls variations
+alias ls="ls --color=always"
 alias la="ls -a"
+alias ll="ls -l"
 alias llg="ll | grep -i $1"
 alias lag="ls -a | grep -i $1"
 alias lsg="ls | grep -i $1"
