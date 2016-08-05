@@ -14,6 +14,7 @@ Plug 'plasticboy/vim-markdown'
 Plug 'JulesWang/css.vim'
 Plug 'mattn/emmet-vim'
 Plug 'sudar/vim-arduino-syntax'
-Plug 'blitzkraft/BinarySearchMove'
+"Plug 'blitzkraft/BinarySearchMove'
 Plug 'tpope/vim-vinegar'
+Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 call plug#end()

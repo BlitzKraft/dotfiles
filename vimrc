@@ -73,4 +73,4 @@ map <C-n> :Vexplore<CR>
 " Allow `h` and `l` to move you to previous/next line when reached
 set whichwrap+=>,l
 set whichwrap+=<,h
-
+set rtp+=~/.fzf
