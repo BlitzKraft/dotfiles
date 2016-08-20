@@ -16,7 +16,7 @@ alias histg="history | grep"
 # Duh
 alias bashrf="source ~/.bashrc"
 alias c="clear"
-alias grepc="grep --color=always" 
+alias grep="grep --color=always" 
 alias myip="curl https://v4.ifconfig.co"
 alias myipv6="curl https://v6.ifconfig.co"
 alias pingtest="ping -c 5 google.com"
