@@ -253,3 +253,6 @@ export PATH="$PATH:/usr/local/rvm/bin" # Add RVM to PATH for scripting
 export MYVIMRC="/home/bk/.vimrc"
 
 [ -f ~/.fzf.bash ] && source ~/.fzf.bash
+
+export EDITOR=vim
+export TASKDDATA=/var/taskd/
