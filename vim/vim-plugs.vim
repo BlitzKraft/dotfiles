@@ -17,4 +17,6 @@ Plug 'sudar/vim-arduino-syntax'
 "Plug 'blitzkraft/BinarySearchMove'
 Plug 'tpope/vim-vinegar'
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
+Plug 'xuhdev/vim-latex-live-preview'
+Plug 'idanarye/vim-smile'
 call plug#end()

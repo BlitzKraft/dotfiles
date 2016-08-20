@@ -68,6 +68,7 @@ let g:netrw_banner=0
 let g:netrw_altv=1
 " Hide dot files in vinegar
 let g:netrw_list_hide = '\(^\|\s\s\)\zs\.\S\+'
+let g:livepreview_previewer = 'zathura'
 
 map <C-n> :Vexplore<CR>
 " Allow `h` and `l` to move you to previous/next line when reached
