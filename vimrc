@@ -40,7 +40,7 @@ vnoremap Y myY`y
 map <F5> :setlocal spell! spelllang=en_us<CR>
 
 set background=dark
-colorscheme onedark
+colorscheme landscape
 
 "Show tab line above
 set showtabline=2

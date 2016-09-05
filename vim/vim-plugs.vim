@@ -5,7 +5,6 @@ if empty(glob('~/.vim/autoload/plug.vim'))
 endif
 call plug#begin('~/.vim/plugged')
 Plug 'junegunn/vim-plug'
-Plug 'VundleVim/Vundle.vim'
 Plug 'xero/sourcerer'
 Plug 'blitzkraft/onedark.vim'
 Plug 'blitzkraft/vim-polyglot'
@@ -15,8 +14,7 @@ Plug 'JulesWang/css.vim'
 Plug 'mattn/emmet-vim'
 Plug 'sudar/vim-arduino-syntax'
 "Plug 'blitzkraft/BinarySearchMove'
-Plug 'tpope/vim-vinegar'
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plug 'xuhdev/vim-latex-live-preview'
-Plug 'idanarye/vim-smile'
+Plug 'itchyny/landscape.vim'
 call plug#end()
