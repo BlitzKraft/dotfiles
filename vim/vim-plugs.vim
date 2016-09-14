@@ -17,4 +17,6 @@ Plug 'sudar/vim-arduino-syntax'
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plug 'xuhdev/vim-latex-live-preview'
 Plug 'itchyny/landscape.vim'
+Plug 'xero/sourcerer.vim'
+Plug 'Yggdroot/indentLine'
 call plug#end()
