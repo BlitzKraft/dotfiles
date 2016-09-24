@@ -1,21 +1,16 @@
 set nocompatible              " be iMproved, required
 filetype off                  " required
 
-if filereadable(expand("/home/bk/.vim/vundles.vim"))
-	source ~/.vim/vim-plugs.vim
-	" source ~/.vim/vundles.vim
-	source ~/.vim/damienConway.vim
-	source ~/.vim/leader.vim
-endif
-
+source ~/.vim/vim-plugs.vim
+source ~/.vim/damienConway.vim
 filetype plugin indent on    " required
 
 set laststatus=2
 
 set t_Co=256
 
+let g:livepreview_previewer = 'zathura'
 let g:powerline#extensions#tabline#enabled = 1
-
 let g:powerline#extensions#tabline#fnamemod = ':t'
 
 " toggle invisible characters
@@ -30,6 +25,7 @@ let showbreak="\u21aa "
 inoremap jk <esc>
 inoremap <esc> <nop>
 set relativenumber
+set nu
 set timeoutlen=1000
 set showcmd
 
@@ -60,9 +56,6 @@ let g:vim_markdown_folding_disabled = 1
 :set undodir=~/.vim/undodir
 :nnoremap <F10> :set paste!<CR>
 
-" For responding to emails in mutt
-" :nnoremap <C-S-b> :%s/BlitzKomp/squarefruitlabs.com/g<CR>
-
 "netrw settings
 let g:netrw_banner=0
 let g:netrw_altv=1
@@ -70,7 +63,6 @@ let g:netrw_list_hide = '\(^\|\s\s\)\zs\.\S\+'
 let g:netrw_liststyle = 3
 let g:netrw_browse_split = 4
 
-let g:livepreview_previewer = 'zathura'
 
 " Allow `h` and `l` to move you to previous/next line when reached
 set whichwrap+=>,l
@@ -98,4 +90,9 @@ function! ToggleVExplorer()
   endif
 endfunction
 " map <silent> <C-E> :call ToggleVExplorer()<CR>
-map <C-n> :call ToggleVExplorer()<CR>
+map <C-n> :Vexplore<CR>
+" leader keys
+let mapleader=","
+
+"ix.io is like pastebin but better. 
+:noremap <silent> <leader>i :w !ix<CR> " Undo directory
