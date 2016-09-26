@@ -2,8 +2,10 @@
 #tmux config needs to be renamed with json extension
 ##adding the email and password is optional. 
 
-### Thu Mar 10 15:26:18 CST 2016
+### Sun Sep 25 18:49:19 PDT 2016
+/home/bk/.bash_profile -> /home/bk/.dotfiles/bash_profile
 /home/bk/.bashrc -> /home/bk/.dotfiles/bashrc
+/home/bk/.bashrc.min -> /home/bk/.dotfiles/bashrc.min
 /home/bk/.config/gtk-3.0/settings.ini -> /home/bk/.dotfiles/config/gtk-3.0/settings.ini
 /home/bk/.gitconfig -> /home/bk/.dotfiles/gitconfig
 /home/bk/.i3/config -> /home/bk/.dotfiles/i3/config
@@ -12,14 +14,17 @@
 /home/bk/.local/lib/python2.7/site-packages/powerline/config_files/config.json -> /home/bk/.dotfiles/local/lib/python2.7/site-packages/powerline/config_files/config.json
 /home/bk/.local/lib/python2.7/site-packages/powerline/config_files/themes/tmux/default.n0idpass -> /home/bk/.dotfiles/local/lib/python2.7/site-packages/powerline/config_files/themes/tmux/default.n0idpass
 /home/bk/.mpd/mpd.conf -> /home/bk/.dotfiles/mpd/mpd.conf
+/home/bk/.mpd/mpd.nocomments.conf -> /home/bk/.dotfiles/mpd/mpd.nocomments.conf
 /home/bk/.mpd/playlists/All.m3u -> /home/bk/.dotfiles/mpd/playlists/All.m3u
 /home/bk/.mpd/playlists/favorites.m3u -> /home/bk/.dotfiles/mpd/playlists/favorites.m3u
 /home/bk/.mpd/playlists/FemaleArtists.m3u -> /home/bk/.dotfiles/mpd/playlists/FemaleArtists.m3u
 /home/bk/.mpd/playlists/instrumentals.m3u -> /home/bk/.dotfiles/mpd/playlists/instrumentals.m3u
 /home/bk/.mutt/muttrc -> /home/bk/.dotfiles/mutt/muttrc
 /home/bk/.mutt/template -> /home/bk/.dotfiles/mutt/template
+/home/bk/.ncmpcpp/bindings -> /home/bk/.dotfiles/ncmpcpp/bindings
 /home/bk/.ncmpcpp/config -> /home/bk/.dotfiles/ncmpcpp/config
 /home/bk/.players.py -> /home/bk/.dotfiles/players.py
+/home/bk/.powerline-tmux.json -> /home/bk/.dotfiles/powerline-tmux.json
 /home/bk/.README -> /home/bk/.dotfiles/README
 /home/bk/.rofioptions -> /home/bk/.dotfiles/rofioptions
 /home/bk/.scripts/checkkarma -> /home/bk/.dotfiles/scripts/checkkarma
@@ -27,10 +32,12 @@
 /home/bk/.scripts/favicon.png -> /home/bk/.dotfiles/scripts/favicon.png
 /home/bk/.scripts/home.html -> /home/bk/.dotfiles/scripts/home.html
 /home/bk/.scripts/ipsave -> /home/bk/.dotfiles/scripts/ipsave
+/home/bk/.scripts/memory.sh -> /home/bk/.dotfiles/scripts/memory.sh
 /home/bk/.scripts/raspi.ip -> /home/bk/.dotfiles/scripts/raspi.ip
 /home/bk/.scripts/remme -> /home/bk/.dotfiles/scripts/remme
 /home/bk/.scripts/suspend -> /home/bk/.dotfiles/scripts/suspend
 /home/bk/.scripts/theme.css -> /home/bk/.dotfiles/scripts/theme.css
+/home/bk/.scripts/users -> /home/bk/.dotfiles/scripts/users
 /home/bk/.scripts/welcome.sh -> /home/bk/.dotfiles/scripts/welcome.sh
 /home/bk/.scripts/xkcd.sh -> /home/bk/.dotfiles/scripts/xkcd.sh
 /home/bk/.sift.conf -> /home/bk/.dotfiles/sift.conf
@@ -41,8 +48,10 @@
 /home/bk/.tmuxp/work-v2.yaml -> /home/bk/.dotfiles/tmuxp/work-v2.yaml
 /home/bk/.vim/damienConway.vim -> /home/bk/.dotfiles/vim/damienConway.vim
 /home/bk/.vim/filetypes.vim -> /home/bk/.dotfiles/vim/filetypes.vim
-/home/bk/.vim/leader.vim -> /home/bk/.dotfiles/vim/leader.vim
+/home/bk/.vim/vim-plugs.vim -> /home/bk/.dotfiles/vim/vim-plugs.vim
 /home/bk/.vim/vundles.vim -> /home/bk/.dotfiles/vim/vundles.vim
 /home/bk/.vimrc -> /home/bk/.dotfiles/vimrc
+/home/bk/.vimrc.min -> /home/bk/.dotfiles/vimrc.min
 /home/bk/.weechat/python/vimode.py -> /home/bk/.dotfiles/weechat/python/vimode.py
 /home/bk/.weechat/weechat.conf -> /home/bk/.dotfiles/weechat/weechat.conf
+/home/bk/.Xresources -> /home/bk/.dotfiles/Xresources
