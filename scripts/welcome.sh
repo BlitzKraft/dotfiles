@@ -1,5 +1,5 @@
 #Variables go here
-myzip="94114"
+myzip="San Francisco"
 wifi=$(iwgetid -r)
 pending=$(task status:pending count)
 btcprice=$(curl -s https://btc-e.com/api/2/btc_usd/ticker | json_pp | grep last | cut -d : -f 2 | tr -d ,| tr -d " ")
@@ -8,8 +8,9 @@ btcprice=$(curl -s https://btc-e.com/api/2/btc_usd/ticker | json_pp | grep last 
 echo -en "\033[47m\e[1;30m"
 echo "Today is $(date)"
 echo -en "\e[0m\e[0m"
-echo -en "Outside "
-weather $myzip | sift Temperature | sed -e 's/^[ \t]*//'
+echo -e "Weather:  "
+. /home/bk/.scripts/ansiweather/ansiweather -l "$myzip"
+
 echo -e "Connected to \033[42m$wifi\e[0m "
 echo -en "Bitcoin Exchange rate is \033[43m\e[1;33m\$"
 echo -e "$btcprice\e[0m"
@@ -27,8 +28,8 @@ echo "You have $pending tasks to do."
 
 #Start output
 echo -e "------"
-echo "The weather at $myzip"
-weather $myzip
+echo "The Forecast at $myzip"
+sh /home/bk/.scripts/ansiweather/ansiweather -F -l "$myzip"
 echo "------"
 echo "------"
 echo -en "\e[31m\e[1mTasks due\e[0m"
