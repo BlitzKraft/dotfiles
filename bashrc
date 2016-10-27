@@ -84,10 +84,6 @@ alias mpd="mpd && mpd-dynamic"
 alias bc="bc -l"
 
 # xkcd
-# Refresh xkcd archive
-# alias xkcd="/home/bk/.scripts/xkcd.sh"
-# Obsoleted by a cron job
-# Still the same script but manual invocation is not needed anymore.
 alias cdx="cd /home/bk/xkcd_archive"
 
 # sifting through the xkcd archive
@@ -150,6 +146,7 @@ alias lsrc="lsrc | sed 's/:/ -> /g'"
 alias weather=". /home/bk/.scripts/ansiweather/ansiweather -F"
 
 alias processing="~/Downloads/processing*/processing-java"
+alias vim="/home/bk/vim/bin/vim"
 
 # Endal
 
