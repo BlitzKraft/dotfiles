@@ -3,13 +3,13 @@
 #Application of this command: curl -s http://www.reddit.com/user/$username/about.json | tr "," "\n" | grep "karma" 
 
 date
-cat ~/.dotfiles/scripts/users | while read i
+while IFS='' read -r i;
 do
 	#Output username, in red
 	echo -e "\e[31m\e[1m$i\e[0m"
 	#Save the response from reddit, to save on number of requests
 	#Replacing the comma with a new line(server returns json)
-	output=$(curl -s http://www.reddit.com/user/$i/about.json | tr "," "\n") 
+	output=$(/usr/local/bin/http --ignore-stdin --body GET https://www.reddit.com/user/$i/about.json | json_pp)
 	#Search for link karma field, separate the number and present it to stdout
 	echo "$output" | grep "link_karma" | tr ": " "\n" | grep -E "[0-9]+" | sed s/"^"/"\tLink Karma: "/	
 	#Wait; this is only to put some delay between requests. To not get IP blocked due to DDoS
@@ -18,4 +18,4 @@ do
 	echo "$output" | grep "comment_karma" | tr ": " "\n" | grep -E "[0-9]+" | sed s/"^"/"\tComment Karma: "/	
 	#New line before we move on to new user
 	echo -en "\n"
-done
+done </home/bk/.dotfiles/scripts/users
