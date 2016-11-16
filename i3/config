@@ -174,5 +174,6 @@ bindsym $mod+r mode "resize"
     #status_command python ~/.local/lib/python2.7/site-packages/powerline/bindings/i3/powerline-i3.py
     #font pango:PowerlineFont 10
 #}
-exec --no-startup-id feh --bg-fill ~/Downloads/One\ Piece/67\ -\ e6OXjNq.jpg
+exec --no-startup-id feh --bg-fill ~/Downloads/Kia-Soul.png
+exec rofi
 #exec python /usr/local/lib/python2.7/dist-packages/powerline/bindings/bar/powerline-bar.py --i3 | bar

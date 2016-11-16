@@ -1,0 +1,36 @@
+session_name: BK
+windows:
+- focus: 'true'
+  layout: d0bd,179x48,0,0,0
+  options:
+    automatic-rename: 'off'
+  panes:
+  - focus: 'true'
+    shell_command: 
+    - tmux rename-window ''
+    - clear
+  start_directory: /home/bk/Documents/
+  window_name: a
+- layout: ad02,179x48,0,0{131x48,0,0[131x39,0,0,1,131x8,0,40,4],47x48,132,0,3}
+  window_name: test
+  options:
+    automatic-rename: 'off'
+  panes:
+  - focus: 'true'
+    shell_command:
+    - cd /home/bk/Documents/
+    - tmux rename-window ''
+    - clear
+  - shell_command:
+    - cd /home/bk/Documents/
+  - shell_command:
+    - cd /home/bk
+    - ncmpcpp -s visualizer
+- layout: d0bf,179x48,0,0,2
+  options:
+    automatic-rename: 'off'
+  panes:
+  - focus: 'true'
+    shell_command: weechat
+  start_directory: /home/bk
+  window_name: '#'

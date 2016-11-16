@@ -67,6 +67,13 @@ unignore From To Reply-To Subject X-Mailer Cc Date 	#Now show only what I want
 hdr_order From: Date: To: Cc: Subject
 set tilde #Pads the end of emails with tilde like vim does
 
+# SSL hardening
+set ssl_force_tls=yes
+set ssl_starttls=yes
+set ssl_use_sslv3=no
+set ssl_verify_dates=yes
+set ssl_verify_host=yes
+
 
 set fast_reply #Doesn't produce too many prompts when replying
 source ~/.mutt/vb
