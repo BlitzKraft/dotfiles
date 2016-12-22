@@ -16,6 +16,7 @@ let showbreak="\u21aa "
 
 inoremap jk <esc>
 " inoremap <esc> <nop>
+set nu
 set relativenumber
 set timeoutlen=1000
 set showcmd
