@@ -12,6 +12,7 @@ alias dot="cd ~/.dotfiles/"
 alias exer="cd ~/exercism"
 alias mk="mkdir"
 alias ..="cd .."
+alias vimrc="vim ~/.vimrc"
 
 # Find a running process
 alias ps="ps auxf"
@@ -147,6 +148,7 @@ alias weather=". /home/bk/.scripts/ansiweather/ansiweather -F"
 
 alias processing="~/Downloads/processing*/processing-java"
 alias vim="/home/bk/vim/bin/vim"
+alias cal="task calendar"
 
 # Endal
 
