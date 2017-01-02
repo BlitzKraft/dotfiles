@@ -1,3 +1,5 @@
+"" Vim Settings
+""-------------
 set nocompatible              " be iMproved, required
 filetype off                  " required
 
@@ -23,19 +25,27 @@ highlight SpecialKey ctermbg=none
 let showbreak="\u21aa "
 
 inoremap jk <esc>
+inoremap kj <esc>
 inoremap <esc> <nop>
 set relativenumber
 set nu
 set timeoutlen=1000
 set showcmd
+set wildmenu
+set foldenable
+set foldlevelstart=10
+set foldmethod=indent
+set backspace=2
 
 vnoremap y myy`y
 vnoremap Y myY`y
+nnoremap j gj
+nnoremap k gk
+nnoremap B ^
+nnoremap E $
 
 
 map <F5> :setlocal spell! spelllang=en_us<CR>
-
-set background=dark
 colorscheme landscape
 
 "Show tab line above
@@ -54,7 +64,9 @@ let g:vim_markdown_folding_disabled = 1
 
 :set undofile
 :set undodir=~/.vim/undodir
-:nnoremap <F10> :set paste!<CR>
+:nnoremap <F8> :set paste!<CR>o
+:set pastetoggle=<F8>
+
 
 "netrw settings
 let g:netrw_banner=0
@@ -95,4 +107,9 @@ map <C-n> :Vexplore<CR>
 let mapleader=","
 
 "ix.io is like pastebin but better. 
-:noremap <silent> <leader>i :w !ix<CR> " Undo directory
+:noremap <silent> <leader>i :w !ix<CR>
+" colorscheme default
+nnoremap rv :source $MYVIMRC<CR>
+set novb
+set vb "t_vb="
+:map! <C-F> jkgUiw`]a
