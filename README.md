@@ -2,7 +2,7 @@
 #tmux config needs to be renamed with json extension
 ##adding the email and password is optional. 
 
-### Sun Sep 25 18:49:19 PDT 2016
+## Mon Jan  2 14:03:26 PST 2017
 /home/bk/.bash_profile -> /home/bk/.dotfiles/bash_profile
 /home/bk/.bashrc -> /home/bk/.dotfiles/bashrc
 /home/bk/.bashrc.min -> /home/bk/.dotfiles/bashrc.min
@@ -25,14 +25,21 @@
 /home/bk/.ncmpcpp/config -> /home/bk/.dotfiles/ncmpcpp/config
 /home/bk/.players.py -> /home/bk/.dotfiles/players.py
 /home/bk/.powerline-tmux.json -> /home/bk/.dotfiles/powerline-tmux.json
-/home/bk/.README -> /home/bk/.dotfiles/README
+/home/bk/.README.md -> /home/bk/.dotfiles/README.md
 /home/bk/.rofioptions -> /home/bk/.dotfiles/rofioptions
+/home/bk/.scores.txt -> /home/bk/.dotfiles/scores.txt
+/home/bk/.scripts/ansiweather -> /home/bk/.dotfiles/scripts/ansiweather
 /home/bk/.scripts/checkkarma -> /home/bk/.dotfiles/scripts/checkkarma
 /home/bk/.scripts/connect-bb-internet -> /home/bk/.dotfiles/scripts/connect-bb-internet
 /home/bk/.scripts/favicon.png -> /home/bk/.dotfiles/scripts/favicon.png
 /home/bk/.scripts/home.html -> /home/bk/.dotfiles/scripts/home.html
+/home/bk/.scripts/icons/1482735385_101_Warning.png -> /home/bk/.dotfiles/scripts/icons/1482735385_101_Warning.png
+/home/bk/.scripts/icons/warning-icon-png-2745.png -> /home/bk/.dotfiles/scripts/icons/warning-icon-png-2745.png
 /home/bk/.scripts/ipsave -> /home/bk/.dotfiles/scripts/ipsave
 /home/bk/.scripts/memory.sh -> /home/bk/.dotfiles/scripts/memory.sh
+/home/bk/.scripts/notify.sh -> /home/bk/.dotfiles/scripts/notify.sh
+/home/bk/.scripts/not.sh -> /home/bk/.dotfiles/scripts/not.sh
+/home/bk/.scripts/questions.txt -> /home/bk/.dotfiles/scripts/questions.txt
 /home/bk/.scripts/raspi.ip -> /home/bk/.dotfiles/scripts/raspi.ip
 /home/bk/.scripts/remme -> /home/bk/.dotfiles/scripts/remme
 /home/bk/.scripts/suspend -> /home/bk/.dotfiles/scripts/suspend
@@ -42,14 +49,15 @@
 /home/bk/.scripts/xkcd.sh -> /home/bk/.dotfiles/scripts/xkcd.sh
 /home/bk/.sift.conf -> /home/bk/.dotfiles/sift.conf
 /home/bk/.tmux.conf -> /home/bk/.dotfiles/tmux.conf
+/home/bk/.tmuxp/BK.large.yaml -> /home/bk/.dotfiles/tmuxp/BK.large.yaml
 /home/bk/.tmuxp/current.yaml -> /home/bk/.dotfiles/tmuxp/current.yaml
 /home/bk/.tmuxp/work-large.yaml -> /home/bk/.dotfiles/tmuxp/work-large.yaml
 /home/bk/.tmuxp/work-small-full.yaml -> /home/bk/.dotfiles/tmuxp/work-small-full.yaml
 /home/bk/.tmuxp/work-v2.yaml -> /home/bk/.dotfiles/tmuxp/work-v2.yaml
+/home/bk/.usr/local/lib/python2.7/dist-packages/powerline/config_files/config.json -> /home/bk/.dotfiles/usr/local/lib/python2.7/dist-packages/powerline/config_files/config.json
 /home/bk/.vim/damienConway.vim -> /home/bk/.dotfiles/vim/damienConway.vim
 /home/bk/.vim/filetypes.vim -> /home/bk/.dotfiles/vim/filetypes.vim
 /home/bk/.vim/vim-plugs.vim -> /home/bk/.dotfiles/vim/vim-plugs.vim
-/home/bk/.vim/vundles.vim -> /home/bk/.dotfiles/vim/vundles.vim
 /home/bk/.vimrc -> /home/bk/.dotfiles/vimrc
 /home/bk/.vimrc.min -> /home/bk/.dotfiles/vimrc.min
 /home/bk/.weechat/python/vimode.py -> /home/bk/.dotfiles/weechat/python/vimode.py
