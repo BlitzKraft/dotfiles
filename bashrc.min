@@ -16,13 +16,15 @@ alias histg="history | grep"
 # Duh
 alias bashrf="source ~/.bashrc"
 alias c="clear"
-alias grep="grep --color=always" 
+alias grepc="grep --color=always" 
+alias localip="ifconfig | grep -A3 wlan0 | grep \"inet \" | sed -e 's/^[[:space:]]*//' | cut -d \" \" -f2 | cut -d : -f2"
+alias localipv6="ifconfig | grep -A3 wlan0 | grep inet6 | sed -e 's/^[[:space:]]*//' | cut -d \" \" -f3"
 alias myip="curl https://v4.ifconfig.co"
 alias myipv6="curl https://v6.ifconfig.co"
 alias pingtest="ping -c 5 google.com"
 
 # ls variations
-alias ls="ls --color=always"
+#alias ls="ls --color=always"
 alias la="ls -a"
 alias ll="ls -l"
 alias llg="ll | grep -i $1"
@@ -43,7 +45,6 @@ alias mv="mv -i"
 alias cp="cp -i"
 
 # List all alis
-# Most of it is to make it look pretty. Show heading columns, numbers and colors
 alias listall="echo -e '\e[31m\e[1mNo.\tAlias\t\tCommand\e[0m';grep alias ~/.bashrc |cut -d' ' -f2- | sed 's/\=/\t\t/g' | nl -w 2"
 
 # Edit this file
