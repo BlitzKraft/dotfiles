@@ -5,7 +5,6 @@
 
 # Navigation
 alias cdht="cd ~/Documents/Persona-BitBucket/httpd"
-alias cdv="cd ~/Documents/vendingmachine"
 alias doc="cd ~/Documents"
 alias down="cd ~/Downloads"
 alias dot="cd ~/.dotfiles/"
@@ -86,9 +85,6 @@ alias bc="bc -l"
 
 # xkcd
 alias cdx="cd /home/bk/xkcd_archive"
-
-# sifting through the xkcd archive
-alias xkcg="sift -ir $1 /home/bk/xkcd_archive"
 
 # Last xkcd comic
 alias lastx="ls /home/bk/xkcd_archive/ | sort -n | tail -1"
@@ -228,6 +224,11 @@ function mygit() {
 	done
 	cat /tmp/tmpgitlist | grep -v ^git | grep -v ^http://// | column -t;
 	rm -f /tmp/tmpgitlist
+}
+
+# ack through the xkcd archive
+function xkcg() {
+	ack -ir $1 /home/bk/xkcd_archive/;
 }
 
 ##########################
