@@ -1,13 +1,27 @@
+# /etc/skel/.bashrc
+#
+# This file is sourced by all *interactive* bash shells on startup,
+# including some apparently interactive shells such as scp and rcp
+# that can't tolerate any output.  So make sure this doesn't display
+# anything or bad things will happen !
+
+# Test for an interactive shell.  There is no need to set anything
+# past this point for scp and rcp, and it's important to refrain from
+# outputting anything in those cases.
+if [[ $- != *i* ]] ; then
+	# Shell is non-interactive.  Be done now!
+	return
+fi
+
 ##########
 # Aliases#
 ##########
 
-
 # Navigation
-alias cdht="cd ~/Documents/Persona-BitBucket/httpd"
+alias gits="cd /mnt/storage/gits"
 alias doc="cd ~/Documents"
 alias down="cd ~/Downloads"
-alias dot="cd ~/.dotfiles/"
+alias dot="cd ~/.dotfiles"
 alias exer="cd ~/exercism"
 alias mk="mkdir"
 alias ..="cd .."
@@ -18,7 +32,7 @@ alias ps="ps auxf"
 alias psg="ps aux | grep -v grep | grep -i -e VSZ -e"
 
 # Powerline
-alias power="cd ~/.local/lib/python2.7/site-packages/powerline"
+alias power="cd /usr/lib64/python2.7/site-packages/powerline"
 alias repower="powerline-daemon -k;sleep 2; powerline-daemon -q"
 
 # Search command history
@@ -32,8 +46,8 @@ alias c="clear"
 alias checkkarma="bash ~/.scripts/checkkarma"
 alias grepc="grep --color=always" 
 alias listwifi="sudo iwlist wlan0 scan | sift -e ESSID -e Address -e Quality -e Encryption | head -32"
-alias localip="ifconfig | grep -A3 wlan0 | grep \"inet \" | sed -e 's/^[[:space:]]*//' | cut -d \" \" -f2 | cut -d : -f2"
-alias localipv6="ifconfig | grep -A3 wlan0 | grep inet6 | sed -e 's/^[[:space:]]*//' | cut -d \" \" -f3"
+alias localip="ifconfig | grep -A3 wlp3s0 | grep \"inet \" | sed -e 's/^[[:space:]]*//' | cut -d \" \" -f2 | cut -d : -f2"
+alias localipv6="ifconfig | grep -A3 wlp3s0 | grep inet6 | sed -e 's/^[[:space:]]*//' | cut -d \" \" -f3"
 alias myip="curl https://v4.ifconfig.co"
 alias myipv6="curl https://v6.ifconfig.co"
 alias pingtest="ping -c 5 google.com"
@@ -70,10 +84,6 @@ alias ipsave="/home/bk/.scripts/ipsave"
 # Show last 10 used ipaddresses
 alias tailip="tail ~/.ip.log"
 
-# Set or get background opacity in gnome-terminal
-alias setb="gconftool-2 -s -t float /apps/gnome-terminal/profiles/Default/background_darkness "
-alias getb="gconftool-2 -g /apps/gnome-terminal/profiles/Default/background_darkness"
-
 # mpc
 alias mpstat='mpc status; echo -n "Rated: "; echo "$(mpd-rate)/5"'
 alias vol="mpc -q volume"
@@ -92,9 +102,6 @@ alias lastx="ls /home/bk/xkcd_archive/ | sort -n | tail -1"
 # Welcome script
 alias welcome="/home/bk/.scripts/welcome.sh"
 
-# Botched the installation of weechat. FML
-alias weechat="/usr/bin/bin/weechat"
-
 # easier invocation
 alias lines="wc -l" 
 
@@ -106,9 +113,6 @@ alias suspend="/home/bk/.scripts/suspend"
 alias rm="rm -i"
 alias mv="mv -i"
 alias cp="cp -i"
-
-# Returns world population at the moment
-alias pop="curl -s http://www.census.gov/popclock/data/population/world | python -c 'import json,sys;obj=json.load(sys.stdin);print obj[\"world\"][\"population\"]'"
 
 # List all alis
 # Most of it is to make it look pretty. Show heading columns, numbers and colors
@@ -122,12 +126,12 @@ alias edgit="vim ~/.gitconfig"
 alias gstat="git status"
 
 # Useful apt get shortcuts
-alias aptget="sudo apt-get"
-alias autoremove="sudo apt-get autoremove"
-alias autoclean="sudo apt-get autoclean"
-alias install="sudo apt-get install $1"
-alias remove="sudo apt-get remove $1"
-alias update="sudo apt-get update && sudo apt-get upgrade"
+alias aptget="sudo equo"
+alias autoremove="sudo equo autoremove"
+alias autoclean="sudo equo autoclean"
+alias install="sudo equo install $1"
+alias remove="sudo equo remove $1"
+alias update="sudo equo update && sudo equo upgrade"
 
 # List functions
 alias listfun="cat ~/.bashrc | grep function | cut -c 9-  "
@@ -142,15 +146,12 @@ alias lsrc="lsrc | sed 's/:/ -> /g'"
 #weather
 alias weather=". /home/bk/.scripts/ansiweather/ansiweather -F"
 
-alias processing="~/Downloads/processing*/processing-java"
-alias vim="/home/bk/vim/bin/vim"
 alias cal="task calendar"
 
 # Endal
 
-
 ###########
-# Functions#
+#Functions#
 ###########
 function mcd () {	#make and cd
     mkdir -p $1
@@ -190,27 +191,8 @@ function extract {	#universal extract
 fi
 }
 
-
-if [ -f /usr/local/lib/python2.7/dist-packages/powerline/bindings/bash/powerline.sh ]; then
-    source /usr/local/lib/python2.7/dist-packages/powerline/bindings/bash/powerline.sh
-fi
-
-if [ -d "$HOME/.local/bin" ]; then
-    PATH="$HOME/.local/bin:$PATH"
-fi
-
-function _update_ps1() {
-   export PS1="$(~/powerline-shell.py $? 2> /dev/null)"
-}
-
-# function weather(){ curl -s "http://api.wunderground.com/auto/wui/geo/ForecastXML/index.xml?query=${@:-<YOURZIPORLOCATION>}"|perl -ne '/<title>([^<]+)/&&printf "%s: ",$1;/<fcttext>([^<]+)/&&print $1,"\n"';}
-
-export PROMPT_COMMAND="_update_ps1; $PROMPT_COMMAND"
-export TERM="xterm-256color"
-
 function mygit() {
 	list="$(ls -1)";
-	#echo "$list"
 	echo "" > /tmp/tmpgitlist
 	for i in $list; do
 		str=""
@@ -231,28 +213,10 @@ function xkcg() {
 	ack -ir $1 /home/bk/xkcd_archive/;
 }
 
-##########################
-# DBUS session Bus address
-# This is for cron to push a notification to the x
-##########################
-touch $HOME/.dbus/Xdbus
-chmod 600 $HOME/.dbus/Xdbus
-env | grep DBUS_SESSION_BUS_ADDRESS > $HOME/.dbus/Xdbus
-echo "export DBUS_SESSION_BUS_ADDRESS" >> $HOME/.dbus/Xdbus
+powerline-daemon -q
+POWERLINE_BASH_CONTINUATION=1
+POWERLINE_BASH_SELECT=1
+# . {repository_root}/powerline/bindings/bash/powerline.sh
+. /usr/lib64/python2.7/site-packages/powerline/bindings/bash/powerline.sh
 
-/home/bk/.scripts/ipsave
-export RTV_EDITOR=vim
-
-### Added by the Heroku Toolbelt
-export PATH="/usr/local/heroku/bin:$PATH"
-
-# export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting
-export PATH="$PATH:/usr/local/rvm/bin" # Add RVM to PATH for scripting
-
-# Relates to vimrc mods from Damian conway
-export MYVIMRC="/home/bk/.vimrc"
-
-[ -f ~/.fzf.bash ] && source ~/.fzf.bash
-
-export EDITOR=vim
-export TASKDDATA=/var/taskd/
+export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting
