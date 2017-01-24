@@ -40,7 +40,8 @@ alias histg="history | grep"
 
 # Duh
 alias bashrf="source ~/.bashrc"
-alias batt="cat /sys/class/power_supply/BAT0/capacity"
+alias batt="acpi"
+alias temp="acpi -t"
 alias btcprice="echo $(curl -s https://btc-e.com/api/2/btc_usd/ticker | json_pp | grep last | cut -d : -f 2 | tr -d ,| tr -d ' ')"
 alias c="clear"
 alias checkkarma="bash ~/.scripts/checkkarma"
@@ -60,6 +61,7 @@ alias muttg="mutt -F ~/.mutt/muttgrc"
 
 # ls variations
 alias la="ls -a"
+alias ll="ls -l"
 alias llg="ll | grep -i $1"
 alias lag="ls -a | grep -i $1"
 alias lsg="ls | grep -i $1"
@@ -126,11 +128,11 @@ alias edgit="vim ~/.gitconfig"
 alias gstat="git status"
 
 # Useful apt get shortcuts
-alias aptget="sudo equo"
 alias autoremove="sudo equo autoremove"
-alias autoclean="sudo equo autoclean"
+alias cleanup="sudo equo cleanup"
 alias install="sudo equo install $1"
 alias remove="sudo equo remove $1"
+alias search="equo search $1"
 alias update="sudo equo update && sudo equo upgrade"
 
 # List functions
@@ -147,6 +149,7 @@ alias lsrc="lsrc | sed 's/:/ -> /g'"
 alias weather=". /home/bk/.scripts/ansiweather/ansiweather -F"
 
 alias cal="task calendar"
+alias outplaying="echo playing | toilet; echo ingress | toilet"
 
 # Endal
 
