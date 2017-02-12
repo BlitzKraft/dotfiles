@@ -52,6 +52,7 @@ alias localipv6="ifconfig | grep -A3 wlp3s0 | grep inet6 | sed -e 's/^[[:space:]
 alias myip="curl https://v4.ifconfig.co"
 alias myipv6="curl https://v6.ifconfig.co"
 alias pingtest="ping -c 5 google.com"
+alias pipes="pipes.sh -r 0 -p 10 -t 1"
 
 # Spread sheet calculator
 alias sc="sc-im"
@@ -90,7 +91,9 @@ alias tailip="tail ~/.ip.log"
 alias mpstat='mpc status; echo -n "Rated: "; echo "$(mpd-rate)/5"'
 alias vol="mpc -q volume"
 alias rate="mpd-rate $1"
-alias mpd="mpd && mpd-dynamic"
+alias nxt="mpc next"
+alias prv="mpc prev"
+alias pause="mpc toggle"
 
 # Enable float values. Keeps me sane
 alias bc="bc -l"
@@ -141,6 +144,7 @@ alias listfun="cat ~/.bashrc | grep function | cut -c 9-  "
 # some utilities
 # alias bb2internet="~/.scripts/connect-bb-internet"
 alias cc="xclip -selection clipboard /dev/null" #Clear clipboard
+alias clip="xclip -selection clipboard"
 
 # lsrc is from rcm, a dotfile managing utility
 alias lsrc="lsrc | sed 's/:/ -> /g'"
@@ -149,7 +153,7 @@ alias lsrc="lsrc | sed 's/:/ -> /g'"
 alias weather=". /home/bk/.scripts/ansiweather/ansiweather -F"
 
 alias cal="task calendar"
-alias outplaying="echo playing | toilet; echo ingress | toilet"
+alias outplaying="echo playing | toilet --gay; echo ingress | toilet --gay;"
 
 # Endal
 
