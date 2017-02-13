@@ -8,7 +8,7 @@ alt + Return
 
 # program launcher
 alt + d
-	rofi
+	rofi -show run
 
 # make sxhkd reload its configuration files:
 alt + Escape
