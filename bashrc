@@ -227,3 +227,4 @@ POWERLINE_BASH_SELECT=1
 . /usr/lib64/python2.7/site-packages/powerline/bindings/bash/powerline.sh
 
 export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting
+export RTV_EDITOR="vim"

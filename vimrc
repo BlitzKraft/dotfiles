@@ -91,3 +91,4 @@ nnoremap rv :source $MYVIMRC<CR>
 set novb
 set vb "t_vb="
 :map! <C-F> jkgUiw`]a
+cmap w!! w !sudo tee > /dev/null %

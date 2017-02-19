@@ -1,6 +1,6 @@
 !# xrdb -merge Xresources # command for updating xresources
-UXTerm*faceName: Sauce Code Powerline
-UXTerm*faceSize: 10
+UXTerm*faceName: Iosevka Nerd Font
+UXTerm*faceSize: 18
 UXTerm.fontMenu.fontdefault.Label: Normal
 UXTerm.fontMenu.font1.Label: Illegible
 UXTerm.fontMenu.font2.Label: Smallest

@@ -1,10 +1,8 @@
 #! /bin/sh
-export PATH="$PATH:/home/bk/.local/bin"
-export PANEL_FIFO="/tmp/panel-fifo"
 
+/home/bk/.local/bin/panel &
 sxhkd &
 rofi &
-panel &
 
 bspc monitor -d I II III IV V VI VII VIII IX X
 
@@ -21,5 +19,6 @@ bspc rule -a mplayer2 state=floating
 bspc rule -a Kupfer.py focus=on
 bspc rule -a Screenkey manage=off
 
+xrdb -merge /home/bk/.dotfiles/rofioptions
 xsetroot -cursor_name left_ptr
-
+feh --bg-scale /mnt/storage/dloads/op.png

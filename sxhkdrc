@@ -89,8 +89,8 @@ alt + {_,shift + }{1-9,0}
 #
 
 # preselect the direction
-alt + ctrl + {h,j,k,l}
-	bspc node -p {west,south,north,east}
+#alt + ctrl + {h,j,k,l}
+	#bspc node -p {west,south,north,east}
 
 # preselect the ratio
 alt + ctrl + {1-9}
@@ -119,3 +119,7 @@ super + alt + shift + {h,j,k,l}
 # move a floating window
 super + {Left,Down,Up,Right}
 	bspc node -v {-20 0,0 20,0 -20,20 0}
+
+# lock the screen
+alt + ctrl + l
+	sh /home/bk/.local/bin/lock
