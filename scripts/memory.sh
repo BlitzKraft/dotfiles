@@ -7,8 +7,6 @@ FULL=\=
 EMPTY=.
 INTERVAL=4
 
-SIZE=$(tput cols)
-SIZE=$((SIZE - 4))
 #breakpoints in percent
 percbreakpoint1=50
 percbreakpoint2=80
@@ -21,6 +19,8 @@ bgcolor="[30m"
 nocolor="[0m"
 
 draw() {
+	SIZE=$(tput cols)
+	SIZE=$((SIZE - 4))
 	perc=$1
 	inc=$(( perc * SIZE / 100 ))
 	breakpoint1=$(( percbreakpoint1 * SIZE / 100))
