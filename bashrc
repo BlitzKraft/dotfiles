@@ -49,8 +49,8 @@ alias grepc="grep --color=always"
 alias listwifi="sudo iwlist wlan0 scan | sift -e ESSID -e Address -e Quality -e Encryption | head -32"
 alias localip="ifconfig | grep -A3 wlp3s0 | grep \"inet \" | sed -e 's/^[[:space:]]*//' | cut -d \" \" -f2 | cut -d : -f2"
 alias localipv6="ifconfig | grep -A3 wlp3s0 | grep inet6 | sed -e 's/^[[:space:]]*//' | cut -d \" \" -f3"
-alias myip="curl https://v4.ifconfig.co"
-alias myipv6="curl https://v6.ifconfig.co"
+alias myip="curl -s https://v4.ifconfig.co"
+alias myipv6="curl -s https://v6.ifconfig.co"
 alias pingtest="ping -c 5 google.com"
 alias pipes="pipes.sh -r 0 -p 10 -t 1"
 
@@ -73,6 +73,7 @@ alias mygit="mygit | column -t"
 # ncmpcpp
 alias nvis="ncmpcpp -s visualizer"
 alias nclk="ncmpcpp -s clock"
+alias ncmpcpp="ncmpcpp -s playlist -S visualizer"
 
 # Change mouse buttons
 alias mouseright="xmodmap -e \"pointer = 3 2 1\""
@@ -153,7 +154,7 @@ alias lsrc="lsrc | sed 's/:/ -> /g'"
 alias weather=". /home/bk/.scripts/ansiweather/ansiweather -F"
 
 alias cal="task calendar"
-alias outplaying="echo playing | toilet --gay; echo ingress | toilet --gay;"
+alias outplaying="echo playing | toilet | lolcat ; echo ingress | toilet | lolcat ;"
 
 # Endal
 
@@ -228,3 +229,11 @@ POWERLINE_BASH_SELECT=1
 
 export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting
 export RTV_EDITOR="vim"
+
+[ -f ~/.fzf.bash ] && source ~/.fzf.bash
+
+PATH="/home/bk/perl5/bin${PATH:+:${PATH}}"; export PATH;
+PERL5LIB="/home/bk/perl5/lib/perl5${PERL5LIB:+:${PERL5LIB}}"; export PERL5LIB;
+PERL_LOCAL_LIB_ROOT="/home/bk/perl5${PERL_LOCAL_LIB_ROOT:+:${PERL_LOCAL_LIB_ROOT}}"; export PERL_LOCAL_LIB_ROOT;
+PERL_MB_OPT="--install_base \"/home/bk/perl5\""; export PERL_MB_OPT;
+PERL_MM_OPT="INSTALL_BASE=/home/bk/perl5"; export PERL_MM_OPT;
