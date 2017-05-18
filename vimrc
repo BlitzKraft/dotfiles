@@ -25,7 +25,6 @@ highlight SpecialKey ctermbg=none
 let showbreak="\u21aa "
 
 inoremap jk <esc>
-inoremap kj <esc>
 inoremap <esc> <nop>
 set relativenumber
 set nu
@@ -46,7 +45,7 @@ nnoremap E $
 
 
 map <F5> :setlocal spell! spelllang=en_us<CR>
-colorscheme landscape
+colorscheme orbital
 
 "Show tab line above
 set showtabline=2
@@ -73,6 +72,7 @@ let g:netrw_altv=1
 let g:netrw_list_hide = '\(^\|\s\s\)\zs\.\S\+'
 let g:netrw_liststyle = 3
 let g:netrw_browse_split = 4
+let g:netrw_winsize = 20
 
 " Allow `h` and `l` to move you to previous/next line when reached
 set whichwrap+=>,l
@@ -80,7 +80,7 @@ set whichwrap+=<,h
 set rtp+=~/.fzf
 set mouse-=a
 
-map <C-n> :Vexplore<CR>
+map <C-n> :Lexplore<CR>
 " leader keys
 let mapleader=","
 
