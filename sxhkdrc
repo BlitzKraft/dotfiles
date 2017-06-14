@@ -123,3 +123,23 @@ super + {Left,Down,Up,Right}
 # lock the screen
 alt + ctrl + l
 	sh /home/bk/.local/bin/lock
+
+# Media keys
+XF86AudioRaiseVolume
+	pactl set-sink-volume 0 +2%
+
+XF86AudioLowerVolume
+	pactl set-sink-volume 0 -2%
+
+XF86AudioMute
+	pactl set-sink-mute 0 toggle
+
+XF86AudioPlay
+	mpc toggle
+
+XF86AudioNext
+	mpc next
+
+XF86AudioPrev
+	mpc prev
+
