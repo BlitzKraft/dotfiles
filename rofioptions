@@ -1,5 +1,5 @@
 ! Enabled modi
-rofi.modi:                           window,run,ssh
+rofi.modi:                           run,ssh
 ! Window opacity
 rofi.opacity:                        70
 ! Window width
@@ -133,7 +133,7 @@ rofi.kb-primary-paste:               Control+Shift+v,Shift+Insert
 ! Keybinding
 rofi.kb-secondary-paste:             Control+v,Insert
 ! Keybinding
-rofi.kb-clear-line:                  Control+u
+! rofi.kb-clear-line:                  Control+u
 ! Keybinding
 rofi.kb-move-front:                  Control+a
 ! Keybinding
