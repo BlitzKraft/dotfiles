@@ -42,7 +42,8 @@ alias histg="history | grep"
 alias bashrf="source ~/.bashrc"
 alias batt="acpi"
 alias temp="acpi -t"
-alias btcprice="echo $(curl -s https://btc-e.com/api/2/btc_usd/ticker | json_pp | grep last | cut -d : -f 2 | tr -d ,| tr -d ' ')"
+alias BK="tmux rename-session BK"
+# alias btcprice="echo $(curl -s https://btc-e.com/api/2/btc_usd/ticker | json_pp | grep last | cut -d : -f 2 | tr -d ,| tr -d ' ')"
 alias c="clear"
 alias checkkarma="bash ~/.scripts/checkkarma"
 alias grepc="grep --color=always" 
@@ -53,6 +54,7 @@ alias myip="curl -s https://v4.ifconfig.co"
 alias myipv6="curl -s https://v6.ifconfig.co"
 alias pingtest="ping -c 5 google.com"
 alias pipes="pipes.sh -r 0 -p 10 -t 1"
+alias steam="LD_PRELOAD='/usr/$LIB/libstdc++.so.6 /usr/$LIB/libgcc_s.so.1 /usr/$LIB/libxcb.so.1 /usr/$LIB/libgpg-error.so' /usr/bin/steam"
 
 # Spread sheet calculator
 alias sc="sc-im"
@@ -92,9 +94,6 @@ alias tailip="tail ~/.ip.log"
 alias mpstat='mpc status; echo -n "Rated: "; echo "$(mpd-rate)/5"'
 alias vol="mpc -q volume"
 alias rate="mpd-rate $1"
-alias nxt="mpc next"
-alias prv="mpc prev"
-alias pause="mpc toggle"
 
 # Enable float values. Keeps me sane
 alias bc="bc -l"
@@ -143,9 +142,9 @@ alias update="sudo equo update && sudo equo upgrade"
 alias listfun="cat ~/.bashrc | grep function | cut -c 9-  "
 
 # some utilities
-# alias bb2internet="~/.scripts/connect-bb-internet"
 alias cc="xclip -selection clipboard /dev/null" #Clear clipboard
 alias clip="xclip -selection clipboard"
+alias scrot="scrot ~/Pictures/Screenshots/%b%d::%H%M%S.png"
 
 # lsrc is from rcm, a dotfile managing utility
 alias lsrc="lsrc | sed 's/:/ -> /g'"
@@ -155,6 +154,8 @@ alias weather=". /home/bk/.scripts/ansiweather/ansiweather -F"
 
 alias cal="task calendar"
 alias outplaying="echo playing | toilet | lolcat ; echo ingress | toilet | lolcat ;"
+alias headphones="pactl set-card-profile bluez_card.00_15_A1_05_65_52 a2dp_sink"
+alias acpi="acpi -V"
 
 # Endal
 
@@ -229,6 +230,7 @@ POWERLINE_BASH_SELECT=1
 
 export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting
 export RTV_EDITOR="vim"
+export EDITOR=/usr/bin/vim
 
 [ -f ~/.fzf.bash ] && source ~/.fzf.bash
 
@@ -237,3 +239,68 @@ PERL5LIB="/home/bk/perl5/lib/perl5${PERL5LIB:+:${PERL5LIB}}"; export PERL5LIB;
 PERL_LOCAL_LIB_ROOT="/home/bk/perl5${PERL_LOCAL_LIB_ROOT:+:${PERL_LOCAL_LIB_ROOT}}"; export PERL_LOCAL_LIB_ROOT;
 PERL_MB_OPT="--install_base \"/home/bk/perl5\""; export PERL_MB_OPT;
 PERL_MM_OPT="INSTALL_BASE=/home/bk/perl5"; export PERL_MM_OPT;
+
+
+# pv wrapper that imitates cp usage
+#
+# Copyleft 2017 by Ignacio Nunez Hernanz <nacho _a_t_ ownyourbits _d_o_t_ com>
+# GPL licensed (see end of file) * Use at your own risk!
+#
+# Usage:
+#   cpv file_or_dir_src file_or_dir_dst
+#
+# More details at ownyourbits.com
+
+function cpv()
+{
+  local DST=${@: -1}                    # last element
+  local SRC=( ${@: 1 : $# - 1} )        # array with rest of elements
+
+  # checks
+  type pv &>/dev/null || { echo "install pv first"; return 1; }
+  [ $# -lt 2  ]       && { echo "too few args"    ; return 1; }
+
+  # special invocation
+  function cpv_rename()
+  {
+    local SRC="$1"
+    local DST="$2"
+    local DSTDIR="$( dirname $DST )"
+
+    # checks
+    if   [ $# -ne 2     ]; then echo "too few args"          ; return 1; fi
+    if ! [ -e "$SRC"    ]; then echo "$SRC doesn't exist"    ; return 1; fi
+    if   [ -d "$SRC"    ]; then echo "$SRC is a dir"         ; return 1; fi
+    if ! [ -d "$DSTDIR" ]; then echo "$DSTDIR does not exist"; return 1; fi
+
+    # actual copy
+    echo -e "\n$SRC > $DST"
+    pv   "$SRC" >"$DST"
+  }
+
+  # special case for cpv_rename()
+  if ! [ -d "$DST" ]; then cpv_rename $@; return $?; fi;
+
+  # more checks
+  for src in ${SRC[@]}; do 
+    local dst="$DST/$( basename $src )"
+    if ! [ -e "$src" ]; then echo "$src doesn't exist" ; return 1;
+    elif [ -e "$dst" ]; then echo "$dst already exists"; return 1; fi
+  done
+
+  # actual copy
+  for src in ${SRC[@]}; do 
+    if ! [ -d "$src" ]; then 
+      local dst="$DST/$( basename $src )"
+      echo -e "\n$src > $dst"
+      pv "$src" > "$dst"
+    else 
+      local dir="$DST/$( basename $src )"
+      mkdir "$dir" || continue
+      local srcs=( $src/* )
+      cpv ${srcs[@]} "$dir";
+    fi
+  done
+  unset cpv_rename
+}
+

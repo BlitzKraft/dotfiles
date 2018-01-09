@@ -45,7 +45,7 @@ nnoremap E $
 
 
 map <F5> :setlocal spell! spelllang=en_us<CR>
-colorscheme orbital
+colorscheme landscape
 
 "Show tab line above
 set showtabline=2
@@ -54,7 +54,7 @@ syntax enable
 let g:choosewin_overlay_enable = 1
 
 :set cursorline
-:hi CursorLine cterm=NONE ctermbg=235 ctermfg=none
+":hi CursorLine cterm=NONE ctermbg=235 ctermfg=none
 
 " Map tab and shift tab to switch buffers
 :nnoremap <Tab> :bnext<CR>
@@ -93,3 +93,6 @@ set vb "t_vb="
 :map! <C-F> jkgUiw`]a
 cmap w!! w !sudo tee > /dev/null %
 setlocal cryptmethod=blowfish2
+
+let g:indentLine_faster = 1
+set splitright
