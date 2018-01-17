@@ -79,6 +79,7 @@ set whichwrap+=>,l
 set whichwrap+=<,h
 set rtp+=~/.fzf
 set mouse-=a
+set scrolloff=3
 
 map <C-n> :Lexplore<CR>
 " leader keys
